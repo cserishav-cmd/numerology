@@ -1,0 +1,13 @@
+{
+  "venvPath": "d:/Projects/new",
+  "venv": ".venv",
+  "extraPaths": [
+    "d:/Projects/new",
+    "d:/Projects/new/.venv/Lib/site-packages",
+    "./.venv/Lib/site-packages"
+  ],
+  "include": [
+    "app",
+    "tests"
+  ]
+}

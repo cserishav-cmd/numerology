@@ -1,0 +1,32 @@
+# Environment and Secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary & Archive files
+.playwright-mcp/
+trash/
+*.zip
+
+# OS generated
+.DS_Store
+Thumbs.db
