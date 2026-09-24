@@ -45,6 +45,14 @@ async def serve_index():
         return FileResponse(index_file)
     return {"message": "Chaldean Numerology API is running. UI is loading..."}
 
+@app.get("/service")
+@app.get("/service.html")
+async def serve_service():
+    service_file = STATIC_DIR / "service.html"
+    if service_file.exists():
+        return FileResponse(service_file)
+    return {"message": "Service page loading..."}
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("app.main:app", host=settings.HOST, port=settings.PORT, reload=True)
