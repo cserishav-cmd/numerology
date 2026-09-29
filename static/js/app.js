@@ -758,6 +758,33 @@ async function displayProductResult(productType = "check_name", paymentId = "", 
   const emailMsg = (emailDispatched && email) ? ` • Dossier emailed to ${email}` : "";
   const pid = paymentId || state.paymentId || "Direct";
 
+  const userD = state.currentAnalysis?.driver_details?.driver_number || 3;
+
+  function injectPostPaymentShopBanner(parentEl, dNum) {
+    if (!parentEl) return;
+    const existing = parentEl.querySelector(".post-payment-gem-recommendation-card");
+    if (existing) existing.remove();
+
+    const d = parseInt(dNum, 10) || 3;
+    const master = (typeof MULANK_MASTER_BRACELETS !== "undefined" && MULANK_MASTER_BRACELETS[d])
+      ? MULANK_MASTER_BRACELETS[d]
+      : { name: `Mulank ${d} Power Bracelet` };
+
+    const card = document.createElement("div");
+    card.className = "post-payment-gem-recommendation-card";
+    card.innerHTML = `
+      <div class="post-pay-gem-left">
+        <span class="post-pay-badge">⚡ COSMIC REMEDY RECOMMENDED (FLIPKART STORE)</span>
+        <h4>Align Your Planetary Frequency with Your Consecrated Gemstone</h4>
+        <p>Now that your analysis is unlocked, wear your authentic consecrated ${master.name} to harmonize your aura and manifest results.</p>
+      </div>
+      <a href="/shop/?mulank=${d}&from=payment" class="btn-post-pay-shop">
+        <span>🛍️ View Prescribed Gemstones in Store (Mulank ${d}) →</span>
+      </a>
+    `;
+    parentEl.prepend(card);
+  }
+
   if (productType === "dc_matrix") {
     state.unlocked.dc_matrix = true;
     state.isMatrixPaid = true;
@@ -780,6 +807,7 @@ async function displayProductResult(productType = "check_name", paymentId = "", 
     if (emailInput && email) emailInput.value = email;
 
     renderMatrixInline();
+    injectPostPaymentShopBanner(dcMatrixSection, userD);
     dcMatrixSection?.scrollIntoView({ behavior: "smooth" });
 
   } else if (productType === "chaldean_chart") {
@@ -803,6 +831,7 @@ async function displayProductResult(productType = "check_name", paymentId = "", 
     if (emailInput && email) emailInput.value = email;
 
     renderChaldeanInline();
+    injectPostPaymentShopBanner(chaldeanSection, userD);
     chaldeanSection?.scrollIntoView({ behavior: "smooth" });
 
   } else {
@@ -831,6 +860,7 @@ async function displayProductResult(productType = "check_name", paymentId = "", 
       await fetchAndDisplayVariants(pid, "check_name");
     }
 
+    injectPostPaymentShopBanner(variantsContainer, userD);
     variantsContainer?.scrollIntoView({ behavior: "smooth" });
   }
 }
@@ -1463,6 +1493,27 @@ function renderPrescribedGemstoneProducts(driverNum, containerId) {
   const dobInput = document.getElementById("inputDOB")?.value || "24-08-2005";
   const fullName = document.getElementById("inputFullName")?.value.trim() || "Seeker";
 
+  // Typewriter animation on service banner
+  const twEl = document.getElementById("serviceTypewriterText");
+  const shopRedirectBtn = document.getElementById("btnServiceRedirectShop");
+  if (shopRedirectBtn) {
+    shopRedirectBtn.href = `/shop/?mulank=${d}&matched=true`;
+  }
+  if (twEl) {
+    const planetName = MULANK_MASTER_BRACELETS[d]?.planet || "Cosmic Planet";
+    const msg = `🎯 Cosmic Match Confirmed: Based on your Driver ${d} (${planetName}), our Vedic engine has prescribed authentic consecrated crystal remedies for your aura.`;
+    let charIdx = 0;
+    twEl.textContent = "";
+    clearInterval(window._serviceTypeInt);
+    window._serviceTypeInt = setInterval(() => {
+      if (charIdx < msg.length) {
+        twEl.textContent += msg.charAt(charIdx++);
+      } else {
+        clearInterval(window._serviceTypeInt);
+      }
+    }, 25);
+  }
+
   // Prescribed stone names for this Driver
   const stoneNames = MULANK_PRESCRIBED_STONES[d] || ["Rose Quartz", "Moonstone"];
   const masterTalisman = MULANK_MASTER_BRACELETS[d];
@@ -1556,6 +1607,9 @@ function renderPrescribedGemstoneProducts(driverNum, containerId) {
           <button type="button" class="btn-order-stone-rzp" data-product-id="${prod.id}">
             <span>✦ Order Consecrated Bracelet — ₹1,499</span>
           </button>
+          <a href="/shop/?mulank=${d}&matched=true" class="btn-prescribed-store-redirect">
+            <span>🛍️ View in Sacred Gemstone Store (Flipkart Style) →</span>
+          </a>
           <a href="${waUrl}" target="_blank" rel="noopener" class="btn-order-stone-wa">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.18-.543-1.897-.787-3.119-2.73-3.214-2.857-.093-.127-.768-1.022-.768-1.95 0-.928.487-1.385.661-1.574.174-.189.381-.237.508-.237.126 0 .253.003.363.008.117.006.274-.045.428.327.16.386.545 1.332.593 1.43.048.099.08.214.015.342-.064.129-.096.209-.191.319-.095.109-.2.245-.286.329-.095.094-.194.196-.083.387.111.19.493.814 1.057 1.318.727.648 1.341.85 1.531.945.191.096.302.08.414-.048.111-.127.476-.556.603-.746.127-.19.254-.159.428-.095.175.064 1.11.523 1.301.619.191.095.318.143.366.222.048.08.048.461-.096.866zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.178L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>

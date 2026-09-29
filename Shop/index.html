@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sacred Mulank Gemstone Bracelets — Numerology Fortune | Flat ₹1,499 Offer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Sacred Mulank Gemstone Store — Numerology Fortune | Flipkart & Amazon Style E-Commerce</title>
   <meta name="description"
-    content="Discover your cosmic power gemstone bracelet based on your Date of Birth & Mulank. Consecrated with authentic Vedic Pran Pratishtha rituals. 100% Certified Natural Crystals. Order directly via WhatsApp at +91 98363 94217.">
+    content="Discover your cosmic power gemstone bracelet based on your Date of Birth & Mulank. Consecrated with authentic Vedic Pran Pratishtha rituals. 100% Certified Natural Crystals. Order directly with Instant Razorpay Checkout & WhatsApp Concierge.">
 
   <!-- Open Graph / Meta -->
-  <meta property="og:title" content="Sacred Mulank Gemstone Bracelets — Numerology Fortune">
-  <meta property="og:description" content="Calculate your Mulank and order your consecrated 100% natural crystal bracelet at flat ₹1,499. WhatsApp +91 98363 94217.">
+  <meta property="og:title" content="Sacred Mulank Gemstones Store — Numerology Fortune">
+  <meta property="og:description" content="Calculate your Mulank and order your consecrated 100% natural crystal bracelet at flat ₹1,499. Instant Razorpay & WhatsApp Concierge.">
   <meta property="og:image" content="./Ametrine.jpg">
   <meta property="og:type" content="website">
 
@@ -27,9 +27,9 @@
   <!-- Razorpay Checkout Integration -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
-  <!-- Stylesheet -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="/static/css/style.css?v=6.0">
-  <link rel="stylesheet" href="./css/shop.css?v=2.0">
+  <link rel="stylesheet" href="./css/shop.css?v=4.0">
 </head>
 
 <body>
@@ -39,53 +39,99 @@
          TOP ANNOUNCEMENT BAR
          =================================================================== -->
     <aside class="top-announcement" aria-label="Special Offer">
-      <span>✨ <strong>SACRED AUSPICIOUS OFFER:</strong> Genuine Energized Gemstone Bracelets at</span>
-      <span class="highlight-offer">Flat ₹1,499/- <s>₹2,500/-</s> (Save ₹1,001)</span>
-      <span>• Vedic Pran Pratishtha & Pan-India Insured Delivery Included</span>
-      <a href="https://api.whatsapp.com/send?phone=919836394217&text=Hello%20Numerology%20Fortune%2C%20I%20want%20to%20order%20a%20Sacred%20Gemstone%20Bracelet." target="_blank" rel="noopener">Order on WhatsApp: +91 98363 94217</a>
+      <div class="announcement-content">
+        <span>⚡ <strong>VEDIC FESTIVE OFFER:</strong> 100% Consecrated Natural Gemstone Bracelets at</span>
+        <span class="highlight-offer">Flat ₹1,499/- <s>₹2,500/-</s> (Save ₹1,001)</span>
+        <span class="announcement-meta">• Pan-India Free Insured Delivery Included</span>
+        <a href="https://api.whatsapp.com/send?phone=919836394217&text=Hello%20Numerology%20Fortune%2C%20I%20want%20to%20order%20a%20Sacred%20Gemstone%20Bracelet." target="_blank" rel="noopener" class="announcement-link">WhatsApp Helpline: +91 98363 94217</a>
+      </div>
     </aside>
 
     <!-- ===================================================================
-         HEADER / NAVBAR (Unified Brand Navbar with Official Transparent Logo)
+         FLIPKART / AMAZON STYLE E-COMMERCE NAVBAR
          =================================================================== -->
-    <header class="top-navbar" id="topNavbar">
-      <div class="nav-container">
+    <header class="fk-navbar" id="topNavbar">
+      <div class="fk-nav-container">
         
-        <!-- Real Brand Logo from static/data -->
-        <a href="/" class="nav-brand" title="Numerology Fortune">
-          <img src="/static/data/logo-transparent.png" alt="Numerology Fortune — Align Your Name, Unlock Your Destiny" class="nav-brand-logo" height="96">
-        </a>
+        <!-- Left: Brand Logo with Flipkart-Assured Sub-Badge -->
+        <div class="fk-nav-left">
+          <a href="/" class="fk-nav-brand" title="Numerology Fortune">
+            <img src="/static/data/logo-transparent.png" alt="Numerology Fortune" class="fk-brand-logo" height="42">
+          </a>
+          <a href="#energizationSection" class="fk-assured-pill" title="100% Vedic Consecrated & Certified Natural">
+            <span class="fk-assured-text">Vedic</span>
+            <span class="fk-assured-plus">Assured ✦</span>
+          </a>
+        </div>
 
-        <!-- Center Navigation Links -->
-        <nav class="nav-menu" id="navMenu">
-          <a href="/" class="nav-link">HOME</a>
-          <a href="/service#serviceCalculator" class="nav-link">CHECK YOUR NAME</a>
-          <a href="/service#dcMatrixSection" class="nav-link">9×9 DC MATRIX</a>
-          <a href="/service#chaldeanChartSection" class="nav-link">CHALDEAN CHART</a>
-          <a href="/shop/" class="nav-link active" style="color: #b88532; font-weight: 700;">✦ GEMSTONE SHOP</a>
-          <a href="/service#faq" class="nav-link">FAQ</a>
-        </nav>
+        <!-- Center: Flipkart-Style Search Bar with Typewriter Placeholder -->
+        <div class="fk-nav-search-wrap">
+          <form class="fk-search-form" id="shopSearchForm" onsubmit="event.preventDefault();">
+            <div class="fk-search-input-box">
+              <svg class="fk-search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="shopSearchInput" class="fk-search-input" placeholder="Search for gemstones, mulank, wealth, love, protection..." autocomplete="off">
+              <button type="button" class="fk-search-clear-btn" id="btnSearchClear" aria-label="Clear search" style="display: none;">✕</button>
+            </div>
+            <button type="button" class="fk-search-submit-btn" id="btnSearchSubmit" aria-label="Submit search">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </form>
+        </div>
 
-        <!-- Right Action CTA -->
-        <div class="nav-cta-wrap">
-          <a href="https://api.whatsapp.com/send?phone=919836394217&text=Hello%20Numerology%20Fortune%2C%20I%20want%20to%20order%20a%20Sacred%20Gemstone%20Bracelet." 
-             class="btn-nav-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <!-- Right: Actions (Calculator, WhatsApp, Cart, Mobile Menu) -->
+        <div class="fk-nav-right">
+          <!-- Check Name Link -->
+          <a href="/service" class="fk-nav-service-link" title="Check Your Name & DC Matrix">
+            <span>Vedic Calculator</span>
+          </a>
+
+          <!-- WhatsApp Helpline -->
+          <a href="https://api.whatsapp.com/send?phone=919836394217&text=Hello%20Numerology%20Fortune%2C%20I%20have%20a%20question%20about%20sacred%20gemstones." 
+             class="fk-nav-wa-btn" target="_blank" rel="noopener" aria-label="Help on WhatsApp">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.18-.543-1.897-.787-3.119-2.73-3.214-2.857-.093-.127-.768-1.022-.768-1.95 0-.928.487-1.385.661-1.574.174-.189.381-.237.508-.237.126 0 .253.003.363.008.117.006.274-.045.428.327.16.386.545 1.332.593 1.43.048.099.08.214.015.342-.064.129-.096.209-.191.319-.095.109-.2.245-.286.329-.095.094-.194.196-.083.387.111.19.493.814 1.057 1.318.727.648 1.341.85 1.531.945.191.096.302.08.414-.048.111-.127.476-.556.603-.746.127-.19.254-.159.428-.095.175.064 1.11.523 1.301.619.191.095.318.143.366.222.048.08.048.461-.096.866zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.178L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"></path>
             </svg>
-            <span>+91 98363 94217</span>
+            <span class="fk-wa-text">+91 98363 94217</span>
           </a>
-          <a href="/service" class="btn-nav-cta">
-            <span>CHECK YOUR NAME — ₹1,499</span>
-          </a>
-          <!-- Mobile Menu Button -->
-          <button type="button" class="btn-mobile-menu-toggle" id="btnMobileMenuToggle" aria-label="Toggle navigation menu">
+
+          <!-- Shopping Cart Button with Dynamic Badge Count -->
+          <button type="button" class="fk-cart-btn" id="btnOpenCart" aria-label="View Shopping Cart">
+            <div class="fk-cart-icon-wrap">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              <span class="fk-cart-badge" id="headerCartCount">0</span>
+            </div>
+            <span class="fk-cart-label">Cart</span>
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button type="button" class="btn-mobile-menu-toggle fk-mobile-toggle" id="btnMobileMenuToggle" aria-label="Toggle navigation menu">
             <span class="hamburger-bar"></span>
             <span class="hamburger-bar"></span>
             <span class="hamburger-bar"></span>
           </button>
         </div>
 
+      </div>
+
+      <!-- Mobile Search Row (Always visible right under nav on mobile, just like Flipkart Mobile App) -->
+      <div class="fk-mobile-search-strip">
+        <div class="fk-mobile-search-inner">
+          <svg class="fk-search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="shopSearchInputMobile" class="fk-search-input" placeholder="Search for Citrine, Pyrite, Mulank 3..." autocomplete="off">
+        </div>
       </div>
 
       <!-- Mobile Navigation Drawer -->
@@ -107,342 +153,381 @@
     </header>
 
     <!-- ===================================================================
-         HERO SECTION
+         FLIPKART-STYLE HORIZONTAL CATEGORIES NAVIGATION STRIP
          =================================================================== -->
-    <section class="hero-section">
-      <div class="hero-aura-glow"></div>
-      <div class="container">
-        <div class="hero-grid">
-
-          <!-- Left Copy Column -->
-          <div class="hero-content">
-            <div class="hero-badge-pill">
-              <span>✦</span>
-              <span>SACRED ASTRO-NUMEROLOGY GEMSTONE COLLECTION</span>
-              <span>✦</span>
-            </div>
-
-            <h1 class="hero-title">
-              Align Your Cosmic Frequency with Your <span class="gold-gradient-text">Sacred Mulank Bracelet</span>
-            </h1>
-
-            <p class="hero-lead">
-              Handcrafted from 100% authentic, certified natural crystal beads. Consecrated with sacred Vedic Pran Pratishtha rituals aligned directly to your unique Birth Date and Planetary Mulank. Attract prosperity, inner calm, unyielding protection, and spiritual clarity.
-            </p>
-
-            <!-- Price Lockup -->
-            <div class="hero-price-lockup">
-              <div class="price-col">
-                <span class="price-label">Original Price</span>
-                <span class="price-original">₹2,500/-</span>
-              </div>
-              <div class="price-col">
-                <span class="price-label">Special Sacred Offer</span>
-                <div class="price-current"><span>₹</span>1,499<span>/-</span></div>
-              </div>
-              <div class="price-discount-tag">
-                SAVE ₹1,001 (40% OFF)
-              </div>
-            </div>
-
-            <!-- CTA Buttons -->
-            <div class="hero-cta-group">
-              <a href="#dobCalculatorSection" class="btn-primary-gold">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M12 6v6l4 2"></path>
-                </svg>
-                <span>Calculate Your Mulank Bracelet</span>
-              </a>
-              <a href="#mulankBraceletsSection" class="btn-secondary-outline">
-                <span>Explore 9 Mulanks</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-            </div>
-
-            <!-- Trust Badges Strip -->
-            <div class="hero-trust-strip">
-              <div class="trust-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-                <span>100% Certified Natural Gemstones</span>
-              </div>
-              <div class="trust-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-                <span>Vedic Pran Pratishtha Included</span>
-              </div>
-              <div class="trust-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="1" y="3" width="15" height="13"></rect>
-                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                </svg>
-                <span>Insured Express Shipping Included</span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Right Showcase Column -->
-          <div class="hero-visual-card">
-            <div class="featured-visual-img-wrap">
-              <img src="./Ametrine.jpg" alt="Sacred Mulank 3 Gemstone Bracelet" class="featured-visual-img" id="heroRotatingImage" />
-            </div>
-
-            <div class="featured-floating-pill">
-              <span class="pill-dot"></span>
-              <strong style="color: #FFFFFF; font-size: 0.88rem;">Consecrated by Vedic Acharyas</strong>
-              <span style="color: var(--gold-400); font-size: 0.82rem;">✦ Ready to Wear</span>
-            </div>
-          </div>
-
-        </div>
+    <nav class="fk-category-strip" aria-label="Gemstone Categories">
+      <div class="fk-cat-container">
+        <button type="button" class="fk-cat-item active" data-cat="all">
+          <span class="fk-cat-icon">⚡</span>
+          <span class="fk-cat-label">All Gemstones</span>
+        </button>
+        <button type="button" class="fk-cat-item fk-cat-matched" id="catMatchedPill" data-cat="matched" style="display: none;">
+          <span class="fk-cat-icon">🎯</span>
+          <span class="fk-cat-label" id="catMatchedLabel">Matched For You</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-mulank="1">
+          <span class="fk-cat-icon">👑</span>
+          <span class="fk-cat-label">Mulank 1 (Sun)</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-mulank="2">
+          <span class="fk-cat-icon">🌙</span>
+          <span class="fk-cat-label">Mulank 2 (Moon)</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-mulank="3">
+          <span class="fk-cat-icon">🔮</span>
+          <span class="fk-cat-label">Mulank 3 (Jupiter)</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-mulank="4">
+          <span class="fk-cat-icon">🛡️</span>
+          <span class="fk-cat-label">Mulank 4 (Rahu)</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-mulank="5">
+          <span class="fk-cat-icon">⚡</span>
+          <span class="fk-cat-label">Mulank 5 (Mercury)</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-mulank="6">
+          <span class="fk-cat-icon">💖</span>
+          <span class="fk-cat-label">Mulank 6 (Venus)</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-mulank="7">
+          <span class="fk-cat-icon">🧘</span>
+          <span class="fk-cat-label">Mulank 7 (Ketu)</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-mulank="8">
+          <span class="fk-cat-icon">💰</span>
+          <span class="fk-cat-label">Mulank 8 (Saturn)</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-mulank="9">
+          <span class="fk-cat-icon">⚔️</span>
+          <span class="fk-cat-label">Mulank 9 (Mars)</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-cat="wealth">
+          <span class="fk-cat-icon">💎</span>
+          <span class="fk-cat-label">Wealth & Luck</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-cat="protection">
+          <span class="fk-cat-icon">🛡️</span>
+          <span class="fk-cat-label">Psychic Shield</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-cat="love">
+          <span class="fk-cat-icon">💖</span>
+          <span class="fk-cat-label">Love & Harmony</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-cat="clarity">
+          <span class="fk-cat-icon">🧠</span>
+          <span class="fk-cat-label">Focus & Clarity</span>
+        </button>
+        <button type="button" class="fk-cat-item" data-cat="spiritual">
+          <span class="fk-cat-icon">🕊️</span>
+          <span class="fk-cat-label">Spiritual Peace</span>
+        </button>
       </div>
-    </section>
+    </nav>
 
     <!-- ===================================================================
-         INTERACTIVE MULANK & DATE OF BIRTH CALCULATOR
+         DYNAMIC TYPEWRITER RECOMMENDATION BANNER
+         Shows live typing animation when numbers match or on page load!
          =================================================================== -->
-    <section class="calculator-section" id="dobCalculatorSection">
+    <section class="fk-typewriter-recommendation-section" id="recommendationEngineSection">
       <div class="container">
-        
-        <div class="section-header">
-          <span class="section-kicker">PERSONALIZED COSMIC MATCH</span>
-          <h2 class="section-title">Discover Your Prescribed Sacred Gemstone Bracelet</h2>
-          <p class="section-desc">
-            In sacred Astro-Numerology, the total vibration of your Date of Birth governs your planetary destiny. Enter your birth date below — our Vedic engine instantly sums and reduces all digits to reveal your ruling Mulank and the exact synergy of crystals destined for your aura.
-          </p>
-        </div>
-
-        <div class="calc-card-container">
+        <div class="fk-typewriter-banner" id="fkTypewriterBanner">
           
-          <div class="calc-header-bar">
-            <div class="calc-bar-title">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="fk-typewriter-badge">
+            <span class="pulse-indicator"></span>
+            <span class="typewriter-badge-text">✦ COSMIC RECOMMENDATION SYSTEM ✦</span>
+          </div>
+
+          <div class="fk-typewriter-body">
+            <div class="typewriter-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="typewriter-text-container">
+              <span class="typewriter-text" id="typewriterText">Loading personalized Vedic resonance recommendations...</span>
+              <span class="typewriter-cursor">|</span>
+            </div>
+          </div>
+
+          <div class="fk-typewriter-action">
+            <button type="button" class="btn-toggle-dob-widget" id="btnToggleDOBWidget">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                 <line x1="16" y1="2" x2="16" y2="6"></line>
                 <line x1="8" y1="2" x2="8" y2="6"></line>
                 <line x1="3" y1="10" x2="21" y2="10"></line>
               </svg>
-              <span>Vedic Date of Birth & Mulank Calculator</span>
-            </div>
-            <div class="calc-example-note">
-              Formula: 24-08-2005 ➔ 2+4+0+8+2+0+0+5 = 21 ➔ 2+1 = <strong>Mulank 3</strong>
-            </div>
+              <span id="btnToggleDOBText">Match by Date of Birth</span>
+            </button>
           </div>
 
-          <div class="calc-body">
-            
-            <div class="calc-form-row">
-              <div class="calc-input-group">
-                <label for="dobInput">Enter Your Date of Birth <span>(DD-MM-YYYY or select date)</span>:</label>
-                <div class="calc-input-wrap">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
+        </div>
+
+        <!-- Collapsible / Expandable Quick DOB Calculator Widget -->
+        <div class="fk-dob-compact-widget" id="fkDOBCompactWidget">
+          <div class="fk-dob-widget-card">
+            <div class="fk-dob-widget-header">
+              <div class="fk-dob-title">
+                <strong>✦ Enter Your Date of Birth</strong> — Vedic Astro-Reduction Engine
+              </div>
+              <div class="fk-dob-example">
+                Example: 24-08-2005 ➔ 2+4+0+8+2+0+0+5 = 21 ➔ 2+1 = <strong>Mulank 3 (Jupiter)</strong>
+              </div>
+            </div>
+
+            <div class="fk-dob-form-row">
+              <div class="fk-dob-input-wrap">
+                <input type="text" id="dobInput" class="fk-dob-input" placeholder="e.g. 24-08-2005" value="24-08-2005">
+                <button type="button" class="btn-primary-gold" id="btnCalculateDOB">
+                  <span>Match My Gemstone</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
                   </svg>
-                  <input type="text" id="dobInput" class="dob-input" placeholder="e.g. 24-08-2005" value="24-08-2005" />
-                </div>
+                </button>
               </div>
 
-              <button type="button" class="btn-primary-gold" id="btnCalculateDOB">
-                <span>Calculate My Bracelet</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
+              <!-- Quick Chips -->
+              <div class="quick-dob-chips">
+                <span>Quick Test:</span>
+                <button type="button" class="chip-btn" data-dob="24-08-2005">24-08-2005 (Mulank 3)</button>
+                <button type="button" class="chip-btn" data-dob="15-06-1998">15-06-1998 (Mulank 3)</button>
+                <button type="button" class="chip-btn" data-dob="10-10-1990">10-10-1990 (Mulank 3)</button>
+                <button type="button" class="chip-btn" data-dob="01-01-2000">01-01-2000 (Mulank 4)</button>
+                <button type="button" class="chip-btn" data-dob="09-09-1999">09-09-1999 (Mulank 9)</button>
+              </div>
             </div>
 
-            <!-- Quick Example Chips -->
-            <div class="quick-dob-chips">
-              <span>Quick Test Examples:</span>
-              <button type="button" class="chip-btn" data-dob="24-08-2005">24-08-2005 (Mulank 3)</button>
-              <button type="button" class="chip-btn" data-dob="15-06-1998">15-06-1998 (Mulank 3)</button>
-              <button type="button" class="chip-btn" data-dob="10-10-1990">10-10-1990 (Mulank 3)</button>
-              <button type="button" class="chip-btn" data-dob="01-01-2000">01-01-2000 (Mulank 4)</button>
-              <button type="button" class="chip-btn" data-dob="09-09-1999">09-09-1999 (Mulank 9)</button>
-            </div>
-
-            <!-- Dynamic Calculator Result Container -->
-            <div class="calc-result-box" id="calcResultBox">
-              
-              <div class="calc-breakdown-strip">
-                <div>
-                  <span style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; display: block;">Mathematical Vedic Reduction</span>
-                  <span class="calc-math" id="calcMathSteps">2+4+0+8+2+0+0+5 = 21 ➔ 2+1 = 3</span>
-                </div>
-                <div style="color: var(--gold-400); font-weight: 600; font-size: 0.88rem;">
-                  ✦ 100% Astrological Match
-                </div>
+            <!-- Mathematical Reduction Breakdown -->
+            <div class="fk-dob-result-row" id="calcResultBox" style="display: none;">
+              <div class="fk-reduction-step">
+                <span id="calcMathSteps">2+4+0+8+2+0+0+5 = 21 ➔ 2+1 = 3</span>
               </div>
-
-              <div class="result-main-grid">
-                
-                <!-- Seal -->
-                <div class="result-mulank-seal">
-                  <div class="seal-number" id="resultMulankNumber">3</div>
-                  <div class="seal-text">MULANK</div>
-                </div>
-
-                <!-- Info -->
-                <div class="result-info">
-                  <h3 id="resultBraceletTitle">Mulank 3 — Cosmic Jupiter Abundance & Wisdom Bracelet</h3>
-                  <div class="result-planet-tag" id="resultPlanetText">Ruling Astrological Frequency: Jupiter (Guru) ✦ Wisdom & Creative Expansion</div>
-                  <div class="result-stones-label">Prescribed Sacred Gemstones Combination:</div>
-                  <div class="result-stones-pills" id="resultStonesWrap">
-                    <span class="stone-chip">✦ Ametrine</span>
-                    <span class="stone-chip">✦ Citrine</span>
-                    <span class="stone-chip">✦ Aventurine</span>
-                    <span class="stone-chip">✦ Amethyst</span>
-                  </div>
-                </div>
-
-                <!-- Action & Price -->
-                <div class="result-cta-col">
-                  <div class="result-price-view">
-                    <small>₹2,500</small> ₹1,499
-                  </div>
-                  <button type="button" class="btn-primary-gold" id="btnOrderCalculated">
-                    <span>Order Mulank Gemstone — ₹1,499</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </button>
-                  <a href="#mulankBraceletsSection" class="btn-browse-separate-stones" id="btnScrollToStones">
-                    <span>Explore Individual Prescribed Stones ↓</span>
-                  </a>
-                  <span style="font-size: 0.76rem; color: var(--gold-300);">Includes Free Vedic Consecration & Shipping</span>
-                </div>
-
+              <div class="fk-reduction-match">
+                <span class="match-badge">🎯 100% Cosmic Match Found:</span>
+                <strong id="resultMulankText">Mulank 3 (Jupiter)</strong>
               </div>
-
-              <!-- Paid In-Depth Astrological & Name Correction Suggestion -->
-              <div class="result-astrology-upsell">
-                <div class="upsell-badge">✦ COMPREHENSIVE VEDIC ANALYSIS</div>
-                <div class="upsell-body">
-                  <h4>Want a 100% Personal Astrological & Name Harmonization Report?</h4>
-                  <p>Don't stop at gemstones alone. Unlock your complete 81-cell DC Matrix, Chaldean sound vibration audit, and certified Vedic Acharya name spelling correction (Paid Option — ₹1,499).</p>
-                </div>
-                <a href="/service" class="btn-upsell-dossier">
-                  <span>Unlock Full Name & Destiny Dossier (₹1,499) →</span>
-                </a>
-              </div>
-
             </div>
 
           </div>
-
         </div>
 
       </div>
     </section>
 
     <!-- ===================================================================
-         THE 9 MULANK POWER BRACELETS SECTION (INDIVIDUAL GEMSTONES SHOWCASE)
+         MOBILE STICKY SORT & FILTER BAR (Flipkart Mobile Classic)
          =================================================================== -->
-    <section class="mulank-section" id="mulankBraceletsSection">
+    <div class="fk-mobile-sort-filter-bar" id="mobileSortFilterBar">
+      <button type="button" class="fk-bar-btn" id="btnMobileSort">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M11 5h10M11 9h7M11 13h4M3 17l3 3 3-3M6 18V4"></path>
+        </svg>
+        <span id="mobileSortLabel">Sort: Popularity</span>
+      </button>
+      <div class="fk-bar-divider"></div>
+      <button type="button" class="fk-bar-btn" id="btnMobileFilter">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        <span>Filter <span class="filter-count-badge" id="mobileFilterCount">0</span></span>
+      </button>
+    </div>
+
+    <!-- ===================================================================
+         MAIN E-COMMERCE STORE CONTAINER (FLIPKART / AMAZON LAYOUT)
+         Desktop: Left Sidebar Filters + Right Product Grid
+         Mobile: 2-Column Responsive Product Grid
+         Tablet: 3-Column Responsive Product Grid
+         =================================================================== -->
+    <main class="fk-store-main" id="mainStoreSection">
       <div class="container">
         
-        <div class="section-header">
-          <span class="section-kicker">SACRED VEDIC HARMONIZERS</span>
-          <h2 class="section-title">Cosmic Mulank Gemstone Collection</h2>
-          <p class="section-desc">
-            Every planetary Mulank number (1 to 9) has its own distinct, authentic gemstones formulated by master Vedic astrologers. Select your Mulank number below to explore and purchase its individual sacred gemstone bracelets, each consecrated for your name and birth date.
-          </p>
-        </div>
-
-        <!-- Astrological Guidance & Paid Consultation Suggestion Banner -->
-        <div class="shop-dob-suggestion-card">
-          <div class="suggestion-left">
-            <span class="suggestion-star">✦</span>
-            <div>
-              <h4 class="suggestion-heading">Not sure which sacred gemstone resonates with your birth date?</h4>
-              <p class="suggestion-sub">
-                Avoid wearing unaligned stones. Match your planetary Mulank via Date of Birth below, or unlock our in-depth <strong>Comprehensive Vedic Name & Astrological Dossier (Paid Service — ₹1,499)</strong> or <strong>9×9 DC Matrix (Paid Service — ₹199)</strong> with personal Acharya consultation.
-              </p>
+        <div class="fk-store-layout">
+          
+          <!-- LEFT SIDEBAR: FILTERS (Flipkart Desktop Style) -->
+          <aside class="fk-sidebar-filters" id="desktopFiltersSidebar">
+            
+            <div class="sidebar-header">
+              <h3>Filters</h3>
+              <button type="button" class="btn-clear-filters" id="btnClearAllFilters">CLEAR ALL</button>
             </div>
+
+            <!-- Active Filter Tags Box -->
+            <div class="active-filter-tags-box" id="activeFilterTagsBox" style="display: none;">
+              <!-- Filled dynamically via JS -->
+            </div>
+
+            <!-- Filter Section 1: Astrological Mulank -->
+            <div class="filter-group">
+              <div class="filter-group-header">
+                <h4>Astrological Mulank</h4>
+              </div>
+              <div class="filter-options-list">
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="mulankFilterRadio" value="all" checked>
+                  <span>All Mulanks (1 to 9)</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="mulankFilterRadio" value="1">
+                  <span>Mulank 1 — Sun (Surya)</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="mulankFilterRadio" value="2">
+                  <span>Mulank 2 — Moon (Chandra)</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="mulankFilterRadio" value="3">
+                  <span>Mulank 3 — Jupiter (Guru)</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="mulankFilterRadio" value="4">
+                  <span>Mulank 4 — Rahu</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="mulankFilterRadio" value="5">
+                  <span>Mulank 5 — Mercury (Budh)</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="mulankFilterRadio" value="6">
+                  <span>Mulank 6 — Venus (Shukra)</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="mulankFilterRadio" value="7">
+                  <span>Mulank 7 — Ketu</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="mulankFilterRadio" value="8">
+                  <span>Mulank 8 — Saturn (Shani)</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="mulankFilterRadio" value="9">
+                  <span>Mulank 9 — Mars (Mangal)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Filter Section 2: Crystal Benefits -->
+            <div class="filter-group">
+              <div class="filter-group-header">
+                <h4>Life Intent & Benefits</h4>
+              </div>
+              <div class="filter-options-list">
+                <label class="filter-checkbox-item">
+                  <input type="checkbox" class="cat-filter-cb" value="wealth">
+                  <span>Wealth, Abundance & Business</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="checkbox" class="cat-filter-cb" value="protection">
+                  <span>Psychic Shield & Grounding</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="checkbox" class="cat-filter-cb" value="love">
+                  <span>Love, Beauty & Relationships</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="checkbox" class="cat-filter-cb" value="clarity">
+                  <span>Exam, Career & Mental Clarity</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="checkbox" class="cat-filter-cb" value="spiritual">
+                  <span>Meditation & Inner Peace</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Filter Section 3: Customer Ratings -->
+            <div class="filter-group">
+              <div class="filter-group-header">
+                <h4>Customer Ratings</h4>
+              </div>
+              <div class="filter-options-list">
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="ratingFilterRadio" value="4.8" checked>
+                  <span>4.8 ★ & above (Top Rated)</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="ratingFilterRadio" value="4.5">
+                  <span>4.5 ★ & above</span>
+                </label>
+                <label class="filter-checkbox-item">
+                  <input type="radio" name="ratingFilterRadio" value="all">
+                  <span>All Ratings</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Filter Section 4: Consecration Guarantee -->
+            <div class="filter-group">
+              <div class="filter-group-header">
+                <h4>Assurance</h4>
+              </div>
+              <div class="filter-options-list">
+                <label class="filter-checkbox-item">
+                  <input type="checkbox" id="cbAssuredFilter" checked disabled>
+                  <span>Vedic Assured ✦ (100% Certified)</span>
+                </label>
+              </div>
+            </div>
+
+          </aside>
+
+          <!-- RIGHT AREA: PRODUCTS SHOWCASE -->
+          <div class="fk-products-area">
+            
+            <!-- Top Controls Row (Breadcrumb, Results count, Flipkart Sort Tabs) -->
+            <div class="fk-products-top-bar">
+              <div class="fk-breadcrumbs-wrap">
+                <nav class="fk-breadcrumb" aria-label="Breadcrumb">
+                  <a href="/">Home</a>
+                  <span class="sep">›</span>
+                  <a href="/shop/">Gemstone Store</a>
+                  <span class="sep">›</span>
+                  <span class="current" id="breadcrumbCurrent">All 16 Sacred Crystals</span>
+                </nav>
+                <div class="fk-results-count">
+                  <span id="resultsCountText">Showing 16 of 16 items</span>
+                </div>
+              </div>
+
+              <!-- Flipkart-Style Sort Tabs (Desktop) -->
+              <div class="fk-sort-tabs" aria-label="Sort products">
+                <span class="sort-title">Sort By</span>
+                <button type="button" class="fk-sort-tab active" data-sort="popularity">Popularity</button>
+                <button type="button" class="fk-sort-tab" data-sort="price-low">Price -- Low to High</button>
+                <button type="button" class="fk-sort-tab" data-sort="price-high">Price -- High to Low</button>
+                <button type="button" class="fk-sort-tab" data-sort="rating">Customer Rating</button>
+                <button type="button" class="fk-sort-tab" data-sort="newest">Newest First</button>
+              </div>
+            </div>
+
+            <!-- Active Astrological Category Banner (When Mulank Selected) -->
+            <div class="fk-active-category-banner" id="activeCategoryBanner" style="display: none;">
+              <!-- Populated dynamically -->
+            </div>
+
+            <!-- FLIPKART PRODUCT GRID: 2-COL MOBILE / 3-COL TABLET / 4-COL DESKTOP -->
+            <div class="fk-product-grid" id="mulankCardsContainer">
+              <!-- Populated dynamically via JS renderProductGrid() -->
+            </div>
+
+            <!-- Empty State Container (If search/filter yields zero results) -->
+            <div class="fk-no-results-box" id="noResultsBox" style="display: none;">
+              <div class="no-results-icon">🔍</div>
+              <h3>No matching sacred gemstones found</h3>
+              <p>Try searching with another crystal name, Mulank number (1-9), or clear active filters.</p>
+              <button type="button" class="btn-primary-gold" id="btnResetSearch">Reset All Filters</button>
+            </div>
+
           </div>
-          <div class="suggestion-actions">
-            <a href="#dobCalculatorSection" class="btn-calc-shortcut">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              <span>Match via Date of Birth</span>
-            </a>
-            <a href="/service" class="btn-paid-dossier-shortcut">
-              <span>Paid Astrological Dossier (₹1,499) →</span>
-            </a>
-          </div>
-        </div>
 
-        <!-- Quick Filter Tabs (1-9) -->
-        <div class="mulank-tabs-nav" aria-label="Mulank Filter Tabs">
-          <button type="button" class="mulank-tab-btn active" data-tab="all" title="View All Gemstones">ALL</button>
-          <button type="button" class="mulank-tab-btn" data-tab="1" title="Mulank 1 - Sun">1</button>
-          <button type="button" class="mulank-tab-btn" data-tab="2" title="Mulank 2 - Moon">2</button>
-          <button type="button" class="mulank-tab-btn" data-tab="3" title="Mulank 3 - Jupiter">3</button>
-          <button type="button" class="mulank-tab-btn" data-tab="4" title="Mulank 4 - Rahu">4</button>
-          <button type="button" class="mulank-tab-btn" data-tab="5" title="Mulank 5 - Mercury">5</button>
-          <button type="button" class="mulank-tab-btn" data-tab="6" title="Mulank 6 - Venus">6</button>
-          <button type="button" class="mulank-tab-btn" data-tab="7" title="Mulank 7 - Ketu">7</button>
-          <button type="button" class="mulank-tab-btn" data-tab="8" title="Mulank 8 - Saturn">8</button>
-          <button type="button" class="mulank-tab-btn" data-tab="9" title="Mulank 9 - Mars">9</button>
-        </div>
-
-        <!-- Active Mulank Dynamic Header Banner -->
-        <div id="mulankActiveHeader" class="mulank-active-header"></div>
-
-        <!-- Cards Container (Populated via JS with Individual Separate Gemstone Cards) -->
-        <div class="mulank-grid" id="mulankCardsContainer">
-          <!-- Dynamically populated with individual gemstone product cards -->
         </div>
 
       </div>
-    </section>
+    </main>
 
     <!-- ===================================================================
-         THE 16 SACRED NATURAL GEMSTONES ENCYCLOPEDIA & CATALOG
-         =================================================================== -->
-    <section class="gemstones-catalog-section" id="gemstoneCatalogSection">
-      <div class="container">
-        
-        <div class="section-header">
-          <span class="section-kicker">NATURAL EARTH HEALERS</span>
-          <h2 class="section-title">The 16 Sacred Natural Gemstones Collection</h2>
-          <p class="section-desc">
-            Explore our encyclopedia of 100% natural, untreated crystal beads. Each stone radiates its own traditional spiritual frequency — from deep wealth manifestation to unshakeable energetic protection. Order individual pure stone bracelets consecrated for your name.
-          </p>
-        </div>
-
-        <!-- Category Filters -->
-        <div class="catalog-filter-bar">
-          <button type="button" class="filter-btn active" data-filter="all">All 16 Crystals</button>
-          <button type="button" class="filter-btn" data-filter="wealth">Abundance & Wealth</button>
-          <button type="button" class="filter-btn" data-filter="protection">Protection & Grounding</button>
-          <button type="button" class="filter-btn" data-filter="love">Love & Compassion</button>
-          <button type="button" class="filter-btn" data-filter="clarity">Focus & Mental Clarity</button>
-          <button type="button" class="filter-btn" data-filter="spiritual">Peace & Meditation</button>
-        </div>
-
-        <!-- 16 Gemstones Grid (Populated via JS) -->
-        <div class="gemstones-grid" id="gemstonesGridContainer">
-          <!-- Dynamically populated with all 16 Gemstone cards -->
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         PRAN PRATISHTHA & CONSECRATION BANNER
+         VEDIC PRAN PRATISHTHA & CONSECRATION BANNER
          =================================================================== -->
     <section class="energization-banner" id="energizationSection">
       <div class="container">
@@ -509,76 +594,13 @@
     </section>
 
     <!-- ===================================================================
-         HOW TO ORDER (3 SIMPLE STEPS)
-         =================================================================== -->
-    <section class="how-it-works-section" id="howToOrderSection">
-      <div class="container">
-        
-        <div class="section-header">
-          <span class="section-kicker">SEAMLESS WHATSAPP ORDERING</span>
-          <h2 class="section-title">How To Order Your Sacred Bracelet</h2>
-          <p class="section-desc">
-            We provide a direct, personalized concierge ordering experience on WhatsApp so your bracelet can be consecrated with your exact birth chart details.
-          </p>
-        </div>
-
-        <div class="steps-cards-grid">
-          
-          <div class="step-card">
-            <span class="step-card-num">01</span>
-            <div class="step-icon-bubble">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
-            </div>
-            <h3>1. Calculate or Select</h3>
-            <p>Enter your birth date in our calculator to discover your prescribed Mulank combination, or select any of our 16 natural crystal bracelets.</p>
-          </div>
-
-          <div class="step-card">
-            <span class="step-card-num">02</span>
-            <div class="step-icon-bubble">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-            </div>
-            <h3>2. Enter Details</h3>
-            <p>Click "Order via WhatsApp" to provide your name, delivery address, and birth date for the personalized Vedic Pran Pratishtha ritual.</p>
-          </div>
-
-          <div class="step-card">
-            <span class="step-card-num">03</span>
-            <div class="step-icon-bubble">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="1" y="3" width="15" height="13"></rect>
-                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                <circle cx="18.5" cy="18.5" r="2.5"></circle>
-              </svg>
-            </div>
-            <h3>3. WhatsApp Redirect</h3>
-            <p>You are seamlessly redirected to our official WhatsApp (+91 98363 94217). Our team confirms your order, shares UPI payment details, and initiates dispatch!</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         TESTIMONIALS & REVIEWS
+         TESTIMONIALS & REVIEWS (Flipkart Verified Style)
          =================================================================== -->
     <section class="reviews-section">
       <div class="container">
         
         <div class="section-header">
-          <span class="section-kicker">REAL EXPERIENCES</span>
+          <span class="section-kicker">VERIFIED BUYERS</span>
           <h2 class="section-title">Blessed By Thousands Across India</h2>
           <p class="section-desc">
             Discover how authentic energized crystals have brought calmness, career breakthroughs, and emotional balance to our community.
@@ -588,9 +610,12 @@
         <div class="reviews-grid">
           
           <div class="review-card">
-            <div class="review-stars">★★★★★</div>
+            <div class="review-stars-row">
+              <span class="fk-rating-badge">5.0 ★</span>
+              <span class="review-verified-badge">✓ Verified Buyer</span>
+            </div>
             <p class="review-text">
-              "I calculated my Mulank (3) from my DOB 24-08-2005. The combination of Ametrine, Citrine, Aventurine, and Amethyst feels so harmonizing. Within two weeks of wearing it, I noticed a huge shift in my exam focus and calmness."
+              "I calculated my Mulank (3) from my DOB 24-08-2005. The combination of Ametrine and Citrine feels so harmonizing. Within two weeks of wearing it, I noticed a huge shift in my exam focus and calmness. Packaging arrived in 3 days!"
             </p>
             <div class="review-author">
               <div class="author-avatar">RD</div>
@@ -602,9 +627,12 @@
           </div>
 
           <div class="review-card">
-            <div class="review-stars">★★★★★</div>
+            <div class="review-stars-row">
+              <span class="fk-rating-badge">5.0 ★</span>
+              <span class="review-verified-badge">✓ Verified Buyer</span>
+            </div>
             <p class="review-text">
-              "The Pyrite and Hematite bracelet for Mulank 8 has unmatched grounding weight. The WhatsApp ordering process was smooth, and the package arrived in a premium velvet box with the consecration certificate."
+              "The Pyrite and Hematite bracelet for Mulank 8 has unmatched grounding weight. The Razorpay checkout was seamless, and the tracking was updated on WhatsApp with the Vedic consecration certificate."
             </p>
             <div class="review-author">
               <div class="author-avatar">AK</div>
@@ -616,7 +644,10 @@
           </div>
 
           <div class="review-card">
-            <div class="review-stars">★★★★★</div>
+            <div class="review-stars-row">
+              <span class="fk-rating-badge">5.0 ★</span>
+              <span class="review-verified-badge">✓ Verified Buyer</span>
+            </div>
             <p class="review-text">
               "I got the Rose Quartz & Moonstone bracelet for Mulank 6. The stones are 100% natural, glowing with such gentle, peaceful feminine energy. Excellent customer support on WhatsApp!"
             </p>
@@ -688,25 +719,13 @@
 
           <div class="faq-item">
             <button type="button" class="faq-question">
-              <span>How do I pay after submitting my WhatsApp order?</span>
+              <span>How do I pay after submitting my order?</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </button>
             <div class="faq-answer">
-              When you submit your order form, you will be seamlessly redirected to our official WhatsApp (+91 98363 94217). Our team will provide an instant official UPI QR code (Google Pay, PhonePe, Paytm, BHIM) or bank account details. Once payment is confirmed, your energization ritual is scheduled and the tracking number is shared upon dispatch.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button type="button" class="faq-question">
-              <span>Can I wear the bracelet while sleeping, exercising, or bathing?</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              We recommend removing your bracelet while bathing, swimming, or washing dishes to protect the elastic stretch cord and avoid chemical corrosion of sensitive crystals (like Selenite or Pyrite). You may wear it to sleep if you are using soothing stones like Amethyst or Moonstone for peaceful dreams.
+              You can pay instantly via the official Razorpay gateway (UPI, Google Pay, PhonePe, Paytm, Debit/Credit Card, Net Banking). On payment completion, your official Order ID & Tax Receipt are sent to your email and our WhatsApp concierge (+91 98363 94217) coordinates dispatch immediately!
             </div>
           </div>
 
@@ -729,7 +748,7 @@
               Sacred Chaldean & Vedic Astro-Numerology Atelier. We handcraft authentic natural gemstone talismans consecrated by traditional rituals to harmonize planetary vibrations and unlock your highest potential.
             </p>
             <p>
-              <strong>Official WhatsApp / Support:</strong><br>
+              <strong>Official WhatsApp / Helpline:</strong><br>
               <a href="https://api.whatsapp.com/send?phone=919836394217" target="_blank" style="color: var(--gold-400); text-decoration: none;">+91 98363 94217</a>
             </p>
           </div>
@@ -737,22 +756,21 @@
           <div class="footer-col">
             <h4>Quick Navigation</h4>
             <ul class="footer-links">
-              <li><a href="#dobCalculatorSection">DOB Calculator</a></li>
-              <li><a href="#mulankBraceletsSection">9 Mulank Power Bracelets</a></li>
-              <li><a href="#gemstoneCatalogSection">16 Natural Crystals</a></li>
-              <li><a href="#energizationSection">Vedic Consecration</a></li>
+              <li><a href="#recommendationEngineSection">Cosmic Match Engine</a></li>
+              <li><a href="#mainStoreSection">All Gemstones Store</a></li>
+              <li><a href="/service">Check Your Name (₹1,499)</a></li>
+              <li><a href="/service#dcMatrixSection">9×9 DC Matrix (₹199)</a></li>
               <li><a href="#faqSection">Frequently Asked Questions</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
-            <h4>Astrological Mulanks</h4>
+            <h4>Planetary Mulanks</h4>
             <ul class="footer-links">
-              <li><a href="javascript:void(0)" onclick="triggerMulankOrder(1)">Mulank 1 (Sun)</a></li>
-              <li><a href="javascript:void(0)" onclick="triggerMulankOrder(3)">Mulank 3 (Jupiter)</a></li>
-              <li><a href="javascript:void(0)" onclick="triggerMulankOrder(4)">Mulank 4 (Rahu)</a></li>
-              <li><a href="javascript:void(0)" onclick="triggerMulankOrder(6)">Mulank 6 (Venus)</a></li>
-              <li><a href="javascript:void(0)" onclick="triggerMulankOrder(8)">Mulank 8 (Saturn)</a></li>
+              <li><a href="javascript:void(0)" onclick="selectMulankTab(1)">Mulank 1 (Sun)</a></li>
+              <li><a href="javascript:void(0)" onclick="selectMulankTab(3)">Mulank 3 (Jupiter)</a></li>
+              <li><a href="javascript:void(0)" onclick="selectMulankTab(6)">Mulank 6 (Venus)</a></li>
+              <li><a href="javascript:void(0)" onclick="selectMulankTab(8)">Mulank 8 (Saturn)</a></li>
             </ul>
           </div>
 
@@ -764,47 +782,183 @@
             <div style="color: var(--gold-300); font-size: 0.85rem;">
               ✦ PAN-INDIA INSURED SHIPPING<br>
               ✦ LUXURY GIFT PACKAGING<br>
-              ✦ 100% NATURAL CRISTALS
+              ✦ 100% NATURAL CRYSTALS
             </div>
           </div>
 
         </div>
 
         <div class="footer-bottom">
-          <p>© 2026 Numerology Fortune. All Rights Reserved. Handcrafted with Vedic Devotion.</p>
+          <p>© 2026 Numerology Fortune. All Rights Reserved. Flipkart-Style Cosmic Shopping Experience.</p>
         </div>
 
       </div>
     </footer>
 
     <!-- ===================================================================
-         MOBILE STICKY ORDER BAR
+         FLIPKART-STYLE SLIDE-IN SHOPPING CART DRAWER
          =================================================================== -->
-    <div class="mobile-sticky-order-bar" id="mobileStickyBar">
-      <div class="sticky-price-info">
-        <span class="sticky-orig">₹2,500</span>
-        <span class="sticky-price"><span>₹</span>1,499</span>
+    <div class="fk-cart-drawer-overlay" id="cartDrawerOverlay">
+      <div class="fk-cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle">
+        
+        <div class="fk-cart-header">
+          <div class="fk-cart-header-title">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <h3 id="cartDrawerTitle">My Shopping Cart (<span id="cartItemCount">0</span>)</h3>
+          </div>
+          <button type="button" class="fk-cart-close-btn" id="btnCloseCart" aria-label="Close cart">✕</button>
+        </div>
+
+        <div class="fk-cart-body" id="cartItemsContainer">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- Flipkart Price Breakdown Footer -->
+        <div class="fk-cart-footer" id="cartFooterSection" style="display: none;">
+          <div class="fk-price-breakdown-card">
+            <div class="breakdown-title">PRICE DETAILS</div>
+            <div class="breakdown-row">
+              <span>Price (<span id="cartSummaryItemCount">1 item</span>)</span>
+              <span id="cartSummaryOriginalPrice">₹2,500</span>
+            </div>
+            <div class="breakdown-row green-text">
+              <span>Sacred Discount</span>
+              <span id="cartSummaryDiscount">- ₹1,001</span>
+            </div>
+            <div class="breakdown-row green-text">
+              <span>Vedic Pran Pratishtha Consecration</span>
+              <span>FREE (Worth ₹999)</span>
+            </div>
+            <div class="breakdown-row green-text">
+              <span>Pan-India Delivery Charges</span>
+              <span>FREE</span>
+            </div>
+            <div class="breakdown-divider"></div>
+            <div class="breakdown-row total-row">
+              <span>Total Payable:</span>
+              <span class="total-amount" id="cartSummaryTotal">₹1,499</span>
+            </div>
+            <div class="savings-pill">
+              🎉 You will save ₹1,001 on this sacred order
+            </div>
+          </div>
+
+          <button type="button" class="fk-place-order-btn" id="btnPlaceOrderFromCart">
+            <span>PLACE ORDER — ₹1,499</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
       </div>
-      <button type="button" class="btn-primary-gold" onclick="openOrderModal()" style="padding: 10px 20px; font-size: 0.88rem;">
-        <span>Order on WhatsApp</span>
-      </button>
     </div>
 
-    <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://api.whatsapp.com/send?phone=919836394217&text=Hello%20Numerology%20Fortune%2C%20I%20want%20to%20order%20a%20Sacred%20Gemstone%20Bracelet." 
-       class="floating-wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat directly with our Vedic Gemologist on WhatsApp">
-      <svg viewBox="0 0 24 24">
-        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.18-.543-1.897-.787-3.119-2.73-3.214-2.857-.093-.127-.768-1.022-.768-1.95 0-.928.487-1.385.661-1.574.174-.189.381-.237.508-.237.126 0 .253.003.363.008.117.006.274-.045.428.327.16.386.545 1.332.593 1.43.048.099.08.214.015.342-.064.129-.096.209-.191.319-.095.109-.2.245-.286.329-.095.094-.194.196-.083.387.111.19.493.814 1.057 1.318.727.648 1.341.85 1.531.945.191.096.302.08.414-.048.111-.127.476-.556.603-.746.127-.19.254-.159.428-.095.175.064 1.11.523 1.301.619.191.095.318.143.366.222.048.08.048.461-.096.866zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.178L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"></path>
-      </svg>
-    </a>
+    <!-- ===================================================================
+         MOBILE BOTTOM NAVIGATION BAR (Flipkart App Classic)
+         =================================================================== -->
+    <nav class="fk-mobile-bottom-nav" aria-label="Mobile Navigation">
+      <a href="/" class="fk-bottom-tab">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="#recommendationEngineSection" class="fk-bottom-tab">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+        <span>Match</span>
+      </a>
+      <a href="#mainStoreSection" class="fk-bottom-tab active">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>Store</span>
+      </a>
+      <button type="button" class="fk-bottom-tab" id="btnBottomCart">
+        <div class="bottom-tab-icon-wrap">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="fk-bottom-cart-badge" id="bottomCartCount">0</span>
+        </div>
+        <span>Cart</span>
+      </button>
+      <a href="https://api.whatsapp.com/send?phone=919836394217&text=Hello%20Numerology%20Fortune%2C%20I%20want%20to%20order%20a%20Sacred%20Gemstone%20Bracelet." target="_blank" rel="noopener" class="fk-bottom-tab">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="#25D366">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.18-.543-1.897-.787-3.119-2.73-3.214-2.857-.093-.127-.768-1.022-.768-1.95 0-.928.487-1.385.661-1.574.174-.189.381-.237.508-.237.126 0 .253.003.363.008.117.006.274-.045.428.327.16.386.545 1.332.593 1.43.048.099.08.214.015.342-.064.129-.096.209-.191.319-.095.109-.2.245-.286.329-.095.094-.194.196-.083.387.111.19.493.814 1.057 1.318.727.648 1.341.85 1.531.945.191.096.302.08.414-.048.111-.127.476-.556.603-.746.127-.19.254-.159.428-.095.175.064 1.11.523 1.301.619.191.095.318.143.366.222.048.08.048.461-.096.866zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.178L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"></path>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+    </nav>
 
     <!-- ===================================================================
-         CHECKOUT & ORDER MODAL (All 5 Details Included)
-         1. Customer Name
-         2. Contact Details (Phone, Email)
-         3. Delivery Address (Street, City, State, Pincode)
-         4. Product Name with ID
-         5. Payment Details
+         MOBILE SORT BOTTOM SHEET MODAL
+         =================================================================== -->
+    <div class="fk-bottom-sheet-overlay" id="sortBottomSheetOverlay">
+      <div class="fk-bottom-sheet" id="sortBottomSheet">
+        <div class="bottom-sheet-header">
+          <h4>SORT BY</h4>
+          <button type="button" class="btn-sheet-close" id="btnCloseSortSheet">✕</button>
+        </div>
+        <div class="bottom-sheet-options">
+          <label class="sheet-radio-item">
+            <input type="radio" name="mobileSortOption" value="popularity" checked>
+            <span>Popularity</span>
+          </label>
+          <label class="sheet-radio-item">
+            <input type="radio" name="mobileSortOption" value="price-low">
+            <span>Price -- Low to High</span>
+          </label>
+          <label class="sheet-radio-item">
+            <input type="radio" name="mobileSortOption" value="price-high">
+            <span>Price -- High to Low</span>
+          </label>
+          <label class="sheet-radio-item">
+            <input type="radio" name="mobileSortOption" value="rating">
+            <span>Customer Rating</span>
+          </label>
+          <label class="sheet-radio-item">
+            <input type="radio" name="mobileSortOption" value="newest">
+            <span>Newest First</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         MOBILE FILTER SLIDE-OVER DRAWER
+         =================================================================== -->
+    <div class="fk-drawer-overlay" id="mobileFilterDrawerOverlay">
+      <div class="fk-filter-drawer" id="mobileFilterDrawer">
+        <div class="drawer-header">
+          <h4>Filters</h4>
+          <button type="button" class="btn-drawer-close" id="btnCloseFilterDrawer">✕</button>
+        </div>
+        <div class="drawer-body" id="mobileFilterDrawerBody">
+          <!-- Populated or cloned from desktop sidebar via JS -->
+        </div>
+        <div class="drawer-footer">
+          <button type="button" class="btn-drawer-reset" id="btnMobileResetFilters">Clear All</button>
+          <button type="button" class="btn-drawer-apply" id="btnMobileApplyFilters">Apply Filters</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         CHECKOUT & ORDER MODAL (5-Point System with Razorpay + WhatsApp)
          =================================================================== -->
     <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="order-modal-dialog">
@@ -840,7 +994,7 @@
                   <span id="modalSelectedMulank">Mulank 3</span>
                 </div>
                 <div class="summary-price-badge">
-                  <s>₹2,500</s> <strong>₹1,499/- (Offer Price)</strong>
+                  <s>₹2,500</s> <strong>₹1,499/- (Special Offer)</strong>
                 </div>
               </div>
             </div>
@@ -870,7 +1024,7 @@
                   <label class="form-label" for="customerEmail">Email Address (For Tax Receipt & Order ID) <span class="req">*</span></label>
                   <input type="email" id="customerEmail" class="form-input" placeholder="rahul@example.com" required />
                   <small style="color: var(--gold-400); font-size: 0.74rem; display: block; margin-top: 4px;">
-                    ✦ Your official Order ID & Tax Receipt will be emailed here for future reference (no login needed).
+                    ✦ Official Tax Receipt & Tracking ID will be delivered to this email.
                   </small>
                 </div>
               </div>
@@ -929,7 +1083,7 @@
                   <span>₹2,500/-</span>
                 </div>
                 <div class="payment-row free-tag">
-                  <span>Sacred Festive Discount</span>
+                  <span>Festive Sacred Discount</span>
                   <span>- ₹1,001/- (40% OFF)</span>
                 </div>
                 <div class="payment-row free-tag">
@@ -961,7 +1115,7 @@
               </button>
 
               <div class="whatsapp-note">
-                🔒 Razorpay popup will open automatically. No login needed! On successful payment, your tax receipt & Order ID are emailed immediately and details sent to WhatsApp (+91 98363 94217).
+                🔒 Official Razorpay checkout popup will open automatically. No login needed! On successful payment, your tax receipt & Order ID are emailed immediately and details sent to WhatsApp (+91 98363 94217).
               </div>
 
             </form>
@@ -969,7 +1123,7 @@
           </div>
 
           <!-- SUCCESS / DISPATCH PREVIEW VIEW -->
-          <div class="order-success-view" id="orderSuccessView">
+          <div class="order-success-view" id="orderSuccessView" style="display: none;">
             <div class="success-check-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <polyline points="20 6 9 17 4 12"></polyline>
@@ -1062,7 +1216,7 @@
 
               <div style="margin-top: 24px; display: flex; gap: 10px;">
                 <button type="button" class="btn-primary-gold" id="btnModalGemBuy" style="flex: 1;">
-                  <span>Order on WhatsApp — ₹1,499</span>
+                  <span>Order Now — ₹1,499</span>
                 </button>
               </div>
             </div>
@@ -1076,7 +1230,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="./js/shop.js"></script>
+  <script src="./js/shop.js?v=5.0"></script>
 </body>
 
 </html>

@@ -5143,5 +5143,149 @@ body.site-body {
   }
 }
 
+/* ==========================================================================
+   FLIPKART-STYLE GEMSTONE RECOMMENDATIONS & SHOP REDIRECTION
+   ========================================================================== */
+.service-typewriter-recommendation-banner {
+  background: linear-gradient(135deg, rgba(26, 20, 14, 0.95) 0%, rgba(13, 10, 7, 0.98) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.service-typewriter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--color-gold-light, #F6E6C2);
+}
+
+.service-typewriter-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  flex: 1;
+  min-width: 240px;
+}
+
+.btn-service-shop-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #E6C775 0%, #C49733 50%, #94691B 100%);
+  color: #0c0905;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-service-shop-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
+}
+
+.btn-prescribed-store-redirect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  background: rgba(40, 116, 240, 0.12);
+  border: 1px solid rgba(40, 116, 240, 0.4);
+  color: #60A5FA;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.btn-prescribed-store-redirect:hover {
+  background: rgba(40, 116, 240, 0.22);
+  color: #FFFFFF;
+}
+
+.post-payment-gem-recommendation-card {
+  background: linear-gradient(135deg, #18130C 0%, #0F0C08 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 20px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.post-pay-gem-left {
+  flex: 1;
+  min-width: 260px;
+}
+
+.post-pay-badge {
+  display: inline-block;
+  background: rgba(56, 142, 60, 0.2);
+  border: 1px solid #388E3C;
+  color: #4ADE80;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.post-pay-gem-left h4 {
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.post-pay-gem-left p {
+  color: #C7BFA7;
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+.btn-post-pay-shop {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #E6C775 0%, #C49733 50%, #94691B 100%);
+  color: #0c0905;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.btn-post-pay-shop:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+}
+
 
 
