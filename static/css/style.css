@@ -259,6 +259,9 @@ body.site-body {
   border-bottom: 2px solid var(--color-gold-primary);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15);
   animation: slideDownNav 0.25s ease forwards;
+  max-height: calc(100dvh - 70px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-nav-drawer.open {
@@ -273,20 +276,21 @@ body.site-body {
 .mobile-nav-links {
   display: flex;
   flex-direction: column;
-  padding: 8px 20px;
+  padding: 4px 18px 2px;
 }
 
 .mobile-nav-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 13px 0;
-  font-size: 0.92rem;
+  padding: 8px 0;
+  min-height: 38px;
+  font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   color: #2D2721;
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   transition: all 0.2s ease;
 }
 
@@ -297,25 +301,25 @@ body.site-body {
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
   color: var(--color-gold-dark);
-  padding-left: 6px;
+  padding-left: 4px;
 }
 
 .mobile-nav-cta-box {
-  padding: 10px 20px 18px;
+  padding: 6px 18px 12px;
 }
 
 .btn-mobile-drawer-cta {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   width: 100%;
   background: var(--color-btn-gold-grad);
   color: #120F0C;
   font-weight: 800;
-  font-size: 0.88rem;
-  letter-spacing: 1px;
-  padding: 12px;
+  font-size: 0.82rem;
+  letter-spacing: 0.8px;
+  padding: 10px 14px;
   border-radius: 8px;
   text-decoration: none;
   box-shadow: var(--shadow-gold-sm);
@@ -1474,6 +1478,8 @@ body.site-body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  scroll-margin-top: 75px;
+  scroll-margin-bottom: 40px;
 }
 
 .input-label {
@@ -1514,6 +1520,8 @@ body.site-body {
   font-size: 0.92rem;
   font-family: inherit;
   transition: var(--transition-smooth);
+  scroll-margin-top: 75px;
+  scroll-margin-bottom: 40px;
 }
 
 .modal-cosmic-input:focus,
@@ -1580,6 +1588,7 @@ body.site-body {
   cursor: pointer;
   box-shadow: var(--shadow-gold-sm);
   transition: var(--transition-smooth);
+  scroll-margin: 25px 0;
 }
 
 .btn-calculate-submit:hover {
@@ -2530,7 +2539,8 @@ body.site-body {
 
 .shop-card-info {
   flex: 1;
-  min-width: 280px;
+  min-width: 240px;
+  max-width: 100%;
 }
 
 .shop-card-title {
@@ -3041,11 +3051,13 @@ body.site-body {
 
 .table-responsive {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin-bottom: 20px;
 }
 
 .dc-table {
   width: 100%;
+  min-width: 580px;
   border-collapse: collapse;
   font-size: 0.82rem;
   text-align: center;
@@ -3393,36 +3405,39 @@ body.site-body {
 
   /* Hero Section */
   .hero-section {
-    padding: 44px 18px 52px;
+    padding: 30px 16px 34px;
   }
 
   .hero-headline {
-    font-size: clamp(2.2rem, 7vw, 3rem);
-    line-height: 1.15;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    line-height: 1.18;
   }
 
   .hero-script-vibration {
-    font-size: clamp(3rem, 11vw, 4rem);
+    font-size: clamp(2.3rem, 8.5vw, 3.2rem);
+    line-height: 1.1;
+    margin: 4px 0 10px;
   }
 
   .hero-description {
-    font-size: 0.95rem;
-    margin-bottom: 28px;
+    font-size: 0.92rem;
+    margin-bottom: 20px;
+    line-height: 1.55;
   }
 
   .hero-obstacles-row {
     justify-content: center;
-    gap: 14px 18px;
-    margin-bottom: 32px;
+    gap: 12px 14px;
+    margin-bottom: 24px;
   }
 
   .obstacle-item {
-    width: 72px;
+    width: 68px;
   }
 
   .obstacle-circle-icon {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
   }
 
   .celestial-numerals-dial {
@@ -3431,16 +3446,16 @@ body.site-body {
 
   /* Power Section */
   .power-correction-section {
-    padding: 56px 18px;
+    padding: 38px 16px;
   }
 
   .power-title {
-    font-size: clamp(2rem, 6.5vw, 2.8rem);
-    line-height: 1.18;
+    font-size: clamp(1.65rem, 5.5vw, 2.3rem);
+    line-height: 1.22;
   }
 
   .power-handwritten-script {
-    font-size: 2.1rem;
+    font-size: clamp(1.6rem, 5.5vw, 2rem);
   }
 
   /* Section 2: Minimal Horizontal List (Each benefit item in one row) */
@@ -3515,40 +3530,45 @@ body.site-body {
 
   /* Celebrities Section */
   .celebrities-banner-section {
-    padding: 56px 18px 64px;
+    padding: 38px 16px 42px;
   }
 
   .celebrities-title {
-    font-size: clamp(1.8rem, 6.5vw, 2.4rem);
-    line-height: 1.2;
+    font-size: clamp(1.6rem, 5vw, 2.1rem);
+    line-height: 1.22;
   }
 
   .footer-center-logo {
-    height: 80px;
-    max-width: 280px;
+    height: 70px;
+    max-width: 250px;
   }
 
   /* Service Calculator Hero & Card */
   .service-hero-section {
-    padding: 40px 16px 16px;
+    padding: 24px 16px 14px;
   }
 
   .service-hero-title {
-    font-size: clamp(2rem, 6.5vw, 2.7rem);
-    line-height: 1.18;
+    font-size: clamp(1.75rem, 5.5vw, 2.3rem);
+    line-height: 1.2;
   }
 
   .service-hero-desc {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
   }
 
   .service-calc-card {
-    padding: 28px 20px;
+    padding: 22px 18px;
     border-radius: 16px;
   }
 
+  .calc-card-header {
+    margin-bottom: 20px;
+  }
+
   .calc-card-title {
-    font-size: 1.7rem;
+    font-size: 1.55rem;
   }
 
   .form-inputs-grid {
@@ -3641,6 +3661,13 @@ body.site-body {
     text-align: center;
   }
 
+  .footer-nav-link {
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 0;
+  }
+
   /* Modals Universal */
   .modal-dialog {
     max-height: 94vh;
@@ -3675,21 +3702,21 @@ body.site-body {
   }
 
   .hero-section {
-    padding: 36px 14px 44px;
+    padding: 26px 14px 30px;
   }
 
   .btn-hero-gold {
     width: 100%;
     justify-content: center;
-    padding: 14px 20px;
+    padding: 13px 18px;
   }
 
   .power-correction-section {
-    padding: 44px 14px;
+    padding: 30px 14px;
   }
 
   .celebrities-banner-section {
-    padding: 44px 14px 52px;
+    padding: 30px 14px 34px;
   }
 
   .btn-banner-outlined {
@@ -3698,11 +3725,11 @@ body.site-body {
   }
 
   .service-calc-card {
-    padding: 22px 14px;
+    padding: 18px 14px;
   }
 
   .calc-card-title {
-    font-size: 1.55rem;
+    font-size: 1.4rem;
   }
 
   .btn-calculate-submit {
@@ -3813,12 +3840,18 @@ body.site-body {
   }
 
   /* FAQ section */
+  .service-faq-section {
+    margin: 32px auto 0;
+    padding: 0 16px;
+  }
+
   .faq-main-title {
-    font-size: 1.7rem;
+    font-size: 1.55rem;
+    margin-bottom: 20px;
   }
 
   .faq-item-card {
-    padding: 18px;
+    padding: 16px;
   }
 }
 
@@ -3913,6 +3946,15 @@ body.site-body {
     padding: 5px 8px;
     font-size: 0.7rem;
   }
+
+  .chaldean-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .num-column {
+    padding: 6px 4px;
+  }
 }
 
 /* ==========================================================================
@@ -3971,9 +4013,31 @@ body.site-body {
 }
 
 @media (max-width: 960px) {
+  .showcase-section {
+    padding: 44px 20px;
+  }
+
+  .showcase-header-block {
+    margin-bottom: 22px;
+  }
+
+  .showcase-title {
+    font-size: clamp(1.65rem, 5vw, 2.2rem);
+  }
+
   .showcase-layout-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 540px) {
+  .showcase-section {
+    padding: 32px 14px;
+  }
+
+  .showcase-title {
+    font-size: clamp(1.4rem, 5vw, 1.85rem);
   }
 }
 
@@ -4122,6 +4186,7 @@ body.site-body {
 .standalone-pricing-strip {
   display: flex;
   align-items: baseline;
+  flex-wrap: wrap;
   gap: 12px;
   padding: 16px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -5030,5 +5095,53 @@ body.site-body {
     align-items: flex-start;
   }
 }
+
+/* ==========================================================================
+   FORM GRID LAYOUTS & MODAL ACTIONS ROW
+   ========================================================================== */
+.form-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-grid-3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+.modal-actions-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .form-grid-2col,
+  .form-grid-3col {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .shop-card-info {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .shop-card-action {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .shop-card-action .btn-primary-gold,
+  .shop-card-action .btn-order-stone-rzp,
+  .shop-card-action .btn-order-stone-wa {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 
 

@@ -1204,23 +1204,21 @@ function initFAQAccordion() {
 // MOBILE MENU TOGGLE
 // --------------------------------------------------------------------------
 function initMobileMenu() {
-  const toggleBtn = document.getElementById("mobileMenuBtn");
-  const navLinks = document.querySelector(".nav-links");
+  const btnToggle = document.getElementById("btnMobileMenuToggle");
+  const mobileDrawer = document.getElementById("mobileNavDrawer");
+  if (!btnToggle || !mobileDrawer) return;
 
-  if (!toggleBtn || !navLinks) return;
+  btnToggle.addEventListener("click", () => {
+    const isOpen = mobileDrawer.classList.toggle("open");
+    btnToggle.classList.toggle("active", isOpen);
+    btnToggle.setAttribute("aria-expanded", String(isOpen));
+  });
 
-  toggleBtn.addEventListener("click", () => {
-    const isVisible = navLinks.style.display === "flex";
-    navLinks.style.display = isVisible ? "none" : "flex";
-    if (!isVisible) {
-      navLinks.style.position = "absolute";
-      navLinks.style.top = "80px";
-      navLinks.style.left = "0";
-      navLinks.style.width = "100%";
-      navLinks.style.flexDirection = "column";
-      navLinks.style.background = "#120e0a";
-      navLinks.style.padding = "20px";
-      navLinks.style.borderBottom = "1px solid var(--border-subtle)";
-    }
+  mobileDrawer.querySelectorAll(".mobile-nav-link, .btn-mobile-drawer-cta").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileDrawer.classList.remove("open");
+      btnToggle.classList.remove("active");
+      btnToggle.setAttribute("aria-expanded", "false");
+    });
   });
 }

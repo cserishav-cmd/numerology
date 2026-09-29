@@ -103,6 +103,7 @@ body::before {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 24px;
+  box-sizing: border-box;
 }
 
 /* Typography Helpers */
@@ -325,11 +326,13 @@ body::before {
   left: 50%;
   transform: translateX(-50%);
   width: 800px;
+  max-width: 100vw;
   height: 500px;
   background: radial-gradient(ellipse, rgba(212, 175, 55, 0.15) 0%, rgba(157, 78, 221, 0.08) 45%, transparent 70%);
   filter: blur(60px);
   pointer-events: none;
   z-index: 0;
+  overflow: hidden;
 }
 
 .hero-grid {
@@ -339,6 +342,11 @@ body::before {
   gap: 48px;
   position: relative;
   z-index: 1;
+}
+
+.hero-content {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .hero-badge-pill {
@@ -2202,17 +2210,20 @@ body::before {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 20px;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal-overlay.active {
+  display: flex;
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -2800,20 +2811,38 @@ body::before {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
+  body {
+    padding-bottom: 76px;
   }
 
-  .mobile-menu-btn {
-    display: block;
+  .nav-menu {
+    display: none !important;
+  }
+
+  .btn-mobile-menu-toggle {
+    display: flex;
   }
 
   .hero-title {
-    font-size: 2.3rem;
+    font-size: clamp(2rem, 6vw, 2.6rem);
+    line-height: 1.2;
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 5vw, 2.3rem);
+    line-height: 1.25;
+  }
+
+  .hero-trust-strip {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .trust-item {
+    justify-content: flex-start;
   }
 
   .calc-form-row {
@@ -2823,6 +2852,7 @@ body::before {
   .result-main-grid {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 20px;
   }
 
   .result-mulank-seal {
@@ -2830,34 +2860,366 @@ body::before {
   }
 
   .result-cta-col {
-    align-items: center;
+    align-items: stretch;
     text-align: center;
+    width: 100%;
+  }
+
+  .result-cta-col .btn-primary-gold {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
   }
 
   .result-stones-pills {
     justify-content: center;
   }
 
-  .form-grid-2 {
-    grid-template-columns: 1fr;
+  .shop-dob-suggestion-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 18px;
+    gap: 16px;
   }
 
-  .gem-modal-grid {
+  .suggestion-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .suggestion-actions .btn-calc-shortcut,
+  .suggestion-actions .btn-paid-dossier-shortcut {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .reviews-grid {
     grid-template-columns: 1fr;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .mobile-sticky-order-bar {
     display: flex;
+    padding: 10px 16px;
+    padding-bottom: max(10px, env(safe-area-inset-bottom, 10px));
+    box-sizing: border-box;
   }
 
   .floating-wa-btn {
-    bottom: 80px;
-    right: 20px;
-    width: 52px;
-    height: 52px;
+    bottom: 84px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .floating-wa-btn svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .top-announcement {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .top-announcement .highlight-offer {
+    margin: 4px auto;
+    display: inline-flex;
+  }
+
+  .hero-section {
+    padding: 36px 0 48px;
+  }
+
+  .hero-aura-glow {
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    transform: none;
+  }
+
+  .hero-badge-pill {
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    padding: 5px 10px;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+
+  .hero-badge-pill span:nth-child(2) {
+    display: inline;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .hero-price-lockup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 16px;
+    padding: 12px 16px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto 28px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-cta-group .btn-primary-gold,
+  .hero-cta-group .btn-secondary-outline {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-visual-card {
+    padding: 20px 14px 24px;
+    border-radius: var(--radius-md);
+  }
+
+  .featured-visual-img-wrap {
+    max-width: 260px;
+  }
+
+  .featured-floating-pill {
+    position: static;
+    transform: none;
+    margin: 16px auto 0;
+    max-width: 100%;
+    white-space: normal;
+    font-size: 0.78rem;
+    padding: 8px 12px;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .calculator-section {
+    padding: 48px 0;
+  }
+
+  .calc-header-bar {
+    padding: 14px 16px;
+  }
+
+  .calc-body {
+    padding: 22px 14px;
+  }
+
+  .calc-result-box {
+    padding: 18px 14px;
+  }
+
+  .mulank-section {
+    padding: 48px 0;
+  }
+
+  .mulank-tabs-nav {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .mulank-tab-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 0.88rem;
+  }
+
+  .mulank-banner-info {
+    padding: 14px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .banner-title-row {
+    gap: 12px;
+  }
+
+  .mulank-seal-mini {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+
+  .mulank-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .gemstones-catalog-section {
+    padding: 48px 0;
+  }
+
+  .gemstones-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .steps-section,
+  .energization-section,
+  .reviews-section,
+  .faq-section {
+    padding: 48px 0;
+  }
+
+  /* Modals */
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .order-modal-dialog,
+  .gem-detail-modal-dialog {
+    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px);
+    border-radius: var(--radius-md);
+  }
+
+  .modal-header-banner {
+    padding: 14px 16px;
+  }
+
+  .modal-header-title {
+    font-size: 1.05rem;
+  }
+
+  .modal-body {
+    padding: 16px 14px 20px;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .payment-method-selector {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .gem-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-nav-wa {
+    padding: 8px 10px;
+    gap: 0;
+  }
+
+  .btn-nav-wa span {
+    display: none;
+  }
+
+  .hero-price-lockup {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 10px;
+    gap: 8px 10px;
+    box-sizing: border-box;
+  }
+
+  .hero-price-lockup .price-col {
+    text-align: center;
+  }
+
+  .result-mulank-seal {
+    width: 100px;
+    height: 100px;
+  }
+
+  .seal-number {
+    font-size: 2.6rem;
+  }
+
+  .calc-breakdown-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.84rem;
+  }
+
+  .faq-question {
+    padding: 16px 16px;
+    font-size: 0.95rem;
+  }
+
+  .faq-answer {
+    padding: 0 16px 16px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .hero-badge-pill {
+    font-size: 0.64rem;
+    padding: 3px 8px;
+  }
+
+  .hero-badge-pill span:nth-child(2) {
+    font-size: 0.64rem;
+  }
+
+  .hero-price-lockup {
+    max-width: 250px;
+    padding: 8px 8px;
+    gap: 6px 8px;
+  }
+
+  .price-current {
+    font-size: 1.4rem;
+  }
+
+  .mulank-tab-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.8rem;
+  }
+
+  .mobile-sticky-order-bar {
+    padding: 8px 12px;
+  }
+
+  .sticky-price {
+    font-size: 1.15rem;
+  }
+
+  .mobile-sticky-order-bar .btn-primary-gold {
+    padding: 8px 12px !important;
+    font-size: 0.8rem !important;
   }
 }
