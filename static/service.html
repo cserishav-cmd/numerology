@@ -20,7 +20,7 @@
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="/static/css/style.css?v=5.3">
+  <link rel="stylesheet" href="/static/css/style.css?v=5.9">
 </head>
 
 <body class="site-body service-page-body">
@@ -39,16 +39,17 @@
       <!-- Center Navigation Links -->
       <nav class="nav-menu" id="navMenu">
         <a href="/" class="nav-link">HOME</a>
-        <a href="/#powerSection" class="nav-link">ABOUT</a>
-        <a href="/service" class="nav-link active">SERVICES</a>
-        <a href="/#celebritiesSection" class="nav-link">SUCCESS STORIES</a>
+        <a href="#serviceCalculator" class="nav-link active">CHECK YOUR NAME</a>
+        <a href="#dcMatrixSection" class="nav-link">9×9 DC MATRIX</a>
+        <a href="#chaldeanChartSection" class="nav-link">CHALDEAN CHART</a>
+        <a href="/shop/" class="nav-link" style="color: #b88532; font-weight: 700;">✦ GEMSTONE SHOP</a>
         <a href="#faq" class="nav-link">FAQ</a>
       </nav>
 
       <!-- Right CTA Button -->
       <div class="nav-cta-wrap">
         <a href="#serviceCalculator" class="btn-nav-cta">
-          <span>CHECK YOUR NAME</span>
+          <span>CHECK YOUR NAME — ₹1,499</span>
           <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
@@ -67,14 +68,14 @@
     <div class="mobile-nav-drawer" id="mobileNavDrawer">
       <div class="mobile-nav-links">
         <a href="/" class="mobile-nav-link">HOME</a>
-        <a href="/#powerSection" class="mobile-nav-link">ABOUT</a>
-        <a href="/service" class="mobile-nav-link active">SERVICES</a>
-        <a href="/#celebritiesSection" class="mobile-nav-link">SUCCESS STORIES</a>
+        <a href="#serviceCalculator" class="mobile-nav-link active">CHECK YOUR NAME</a>
+        <a href="#dcMatrixSection" class="mobile-nav-link">9×9 DC MATRIX</a>
+        <a href="#chaldeanChartSection" class="mobile-nav-link">CHALDEAN CHART</a>
         <a href="#faq" class="mobile-nav-link">FAQ</a>
       </div>
       <div class="mobile-nav-cta-box">
         <a href="#serviceCalculator" class="btn-mobile-drawer-cta">
-          <span>CHECK YOUR NAME →</span>
+          <span>CHECK YOUR NAME — ₹1,499 →</span>
         </a>
       </div>
     </div>
@@ -100,6 +101,19 @@
           Enter your birth details below to calculate your unique Driver &amp; Conductor frequencies,
           evaluate your planetary suitability, and unlock personalized auspicious name spelling variations.
         </p>
+
+        <!-- Quick 3-Service Navigation Bar -->
+        <div class="service-quick-pills-bar" id="serviceQuickPillsBar">
+          <button type="button" class="quick-pill-item active" data-segment="check_name" id="pillCheckName">
+            <span class="pill-dot">✦</span> 1. Name Suggestions Only — ₹1,499
+          </button>
+          <button type="button" class="quick-pill-item" data-segment="dc_matrix" id="pillDCMatrix">
+            <span class="pill-dot">✦</span> 2. 9×9 DC Matrix Only — ₹199
+          </button>
+          <button type="button" class="quick-pill-item" data-segment="chaldean_chart" id="pillChaldeanChart">
+            <span class="pill-dot">✦</span> 3. Chaldean Sound Chart Only — ₹199
+          </button>
+        </div>
       </div>
 
       <!-- Main Dedicated Calculation Card -->
@@ -107,9 +121,9 @@
         <div class="service-calc-card">
           
           <div class="calc-card-header">
-            <div class="calc-step-tag">STEP 1 OF 2</div>
-            <h2 class="calc-card-title">Enter Your Birth Details</h2>
-            <p class="calc-card-sub">Begin your personalized Chaldean vibrational reading</p>
+            <div class="calc-step-tag" id="calcStepTag">STEP 1 OF 2 · CHECK YOUR NAME (₹1,499)</div>
+            <h2 class="calc-card-title" id="calcCardTitle">Enter Your Birth Details</h2>
+            <p class="calc-card-sub" id="calcCardSub">Begin your personalized Chaldean vibrational reading</p>
           </div>
 
           <!-- Step 1: Input Form -->
@@ -214,7 +228,7 @@
                 <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
                   <path d="M10 2L11.8 7.2L17 9L11.8 10.8L10 16L8.2 10.8L3 9L8.2 7.2L10 2Z" fill="#1C1814" />
                 </svg>
-                <span class="btn-calc-text">Calculate &amp; Harmonize My Name →</span>
+                <span class="btn-calc-text" id="btnAnalyzeText">Proceed to Pay ₹1,499 for Name Suggestions →</span>
               </button>
             </div>
           </form>
@@ -228,74 +242,100 @@
             <p class="loading-text">Deciphering Chaldean frequencies &amp; planetary alignments...</p>
           </div>
 
-          <!-- Step 2: Paywall Package Selection (₹99 vs ₹199) -->
+          <!-- Step 2: Paywall Section (Check Your Name ₹1,499, 9x9 Matrix ₹199, Chaldean Chart ₹199) -->
           <section id="paywallSelectionSection" class="paywall-selection-container hidden">
             <div class="paywall-intro-header">
               <div class="paywall-badge">
                 <span class="pulse-dot"></span>
-                <span>Profile Ready for Unlock</span>
+                <span>Profile Computed &amp; Ready</span>
               </div>
               <h3 class="paywall-title">Choose Your Numerology Package</h3>
               <p class="paywall-subtitle">
-                Your Chaldean vibrations and planetary alignments are computed. Choose an option below to unlock your personalized results:
+                Your birth frequencies are ready. Choose your desired package below to unlock your personalized results:
               </p>
             </div>
 
-            <div class="packages-comparison-grid">
-
-              <!-- Plan 1: Name Alignment (₹99) -->
-              <div id="correctionBanner" class="package-plan-card">
+            <div class="paywall-three-tier-grid">
+              <!-- Tier 1: Check Your Name (Featured ₹1,499) -->
+              <div id="cardCheckName" class="package-plan-card featured-combo-plan">
+                <div class="featured-ribbon">🔥 BEST VALUE · FULL DOSSIER</div>
                 <div class="plan-header">
-                  <span class="plan-type-pill">NAME ALIGNMENT</span>
-                  <h4 class="plan-title">Align Your Name</h4>
-                  <p class="plan-desc">Personalized spelling suggestions designed around your numerology profile.</p>
+                  <span class="plan-type-pill combo-pill">NAME ALIGNMENT</span>
+                  <h4 class="plan-title">Check Your Name</h4>
+                  <p class="plan-desc">Personalized auspicious spelling variations designed around your Driver &amp; Conductor frequencies with zero change in pronunciation.</p>
                   <div class="plan-price-wrap">
-                    <span class="original-price">₹499</span>
-                    <span class="current-price">₹99</span>
-                    <span class="discount-badge">80% OFF</span>
+                    <span class="original-price">₹2,999</span>
+                    <span class="current-price" id="priceDisplayCheckName">₹1,499</span>
+                    <span class="discount-badge combo-discount">50% OFF</span>
                   </div>
                 </div>
 
                 <ul class="plan-features">
-                  <li><span class="check-mark">✓</span> <strong>3–5 Auspicious Name Spelling Variations</strong></li>
-                  <li><span class="check-mark">✓</span> Preserves Your Same Exact Pronunciation</li>
-                  <li><span class="check-mark">✓</span> Auspicious Name Harmony Certificate</li>
+                  <li><span class="check-mark gold-check">✓</span> <strong>3–5 Auspicious Name Spelling Variations</strong></li>
+                  <li><span class="check-mark gold-check">✓</span> <strong>Preserves Exact Same Pronunciation</strong></li>
+                  <li><span class="check-mark">✓</span> Full Vibrational Profile (Root &amp; Compound Numbers)</li>
+                  <li><span class="check-mark">✓</span> Driver (D) &amp; Conductor (C) Planetary Energies</li>
+                  <li><span class="check-mark">✓</span> Friendly, Good/Best &amp; Neutral Vibrational Guide</li>
+                  <li><span class="check-mark">✓</span> Official Auspicious Name Harmony Certificate (Print / PDF)</li>
+                  <li><span class="check-mark">✓</span> Permanent Email Dossier &amp; Receipt Delivery</li>
+                </ul>
+
+                <button type="button" id="btnUnlockCheckName" class="btn-unlock-plan btn-combo-tier">
+                  <span>Unlock Name Spellings — ₹1,499 →</span>
+                </button>
+              </div>
+
+              <!-- Tier 2: 9×9 DC Power Matrix (₹199 Standalone) -->
+              <div id="cardPaywallDCMatrix" class="package-plan-card" style="border-color: rgba(168, 85, 247, 0.45);">
+                <div class="plan-header">
+                  <span class="plan-type-pill" style="color: #C084FC;">STANDALONE ARCHIVE</span>
+                  <h4 class="plan-title">9×9 DC Power Matrix</h4>
+                  <p class="plan-desc">Complete 81-intersection symmetric energy matrix highlighting your specific Driver &amp; Conductor cosmic cell.</p>
+                  <div class="plan-price-wrap">
+                    <span class="original-price">₹499</span>
+                    <span class="current-price" id="priceDisplayPaywallDCMatrix" style="color: #C084FC;">₹199</span>
+                    <span class="discount-badge" style="background: rgba(168, 85, 247, 0.2); color: #E9D5FF;">60% OFF</span>
+                  </div>
+                </div>
+
+                <ul class="plan-features">
+                  <li><span class="check-mark purple">✓</span> <strong>All 81 Combinations (D1/C1 to D9/C9)</strong></li>
+                  <li><span class="check-mark purple">✓</span> <strong>Interactive Live Cell Synergy Inspector</strong></li>
+                  <li><span class="check-mark purple">✓</span> <strong>Your Resonant Cell Highlighted</strong></li>
+                  <li><span class="check-mark">✓</span> Recommended Harmonic Name Numbers</li>
                   <li><span class="check-mark">✓</span> Permanent Email Dossier &amp; Receipt</li>
                 </ul>
 
-                <button type="button" id="btnUnlockCorrection" class="btn-unlock-plan btn-gold-tier">
-                  <span>Unlock Name Spellings — ₹99 →</span>
+                <button type="button" id="btnUnlockPaywallDCMatrix" class="btn-unlock-plan" style="background: linear-gradient(135deg, #9333EA 0%, #7E22CE 100%); color: #FFFFFF; border: none;">
+                  <span>Unlock 9×9 Matrix — ₹199 →</span>
                 </button>
               </div>
 
-              <!-- Plan 2: All-In-One Combo (₹199 - Most Popular) -->
-              <div id="matrixPaidBanner" class="package-plan-card featured-combo-plan">
-                <div class="featured-ribbon">🔥 MOST POPULAR • ALL-IN-ONE</div>
+              <!-- Tier 3: Chaldean Sound Chart (₹199 Standalone) -->
+              <div id="cardPaywallChaldeanChart" class="package-plan-card" style="border-color: rgba(245, 158, 11, 0.45);">
                 <div class="plan-header">
-                  <span class="plan-type-pill combo-pill">COMPLETE DOSSIER</span>
-                  <h4 class="plan-title">All-In-One Combo &amp; Matrix</h4>
-                  <p class="plan-desc">Includes everything in ₹99 plus your complete Unredacted Vibrational Profile &amp; Matrix.</p>
+                  <span class="plan-type-pill" style="color: #FBBF24;">SACRED SOUND ARCHIVE</span>
+                  <h4 class="plan-title">Chaldean Sound Chart</h4>
+                  <p class="plan-desc">Ancient Babylonian sound vibration mappings (1–8) with personalized letter-by-letter sound frequency analysis for your name.</p>
                   <div class="plan-price-wrap">
-                    <span class="original-price">₹999</span>
-                    <span class="current-price">₹199</span>
-                    <span class="discount-badge combo-discount">80% OFF</span>
+                    <span class="original-price">₹499</span>
+                    <span class="current-price" id="priceDisplayPaywallChaldean" style="color: #FBBF24;">₹199</span>
+                    <span class="discount-badge" style="background: rgba(245, 158, 11, 0.2); color: #FEF3C7;">60% OFF</span>
                   </div>
                 </div>
 
                 <ul class="plan-features">
-                  <li><span class="check-mark gold-check">✓</span> <strong>EVERYTHING IN ₹99 PLAN INCLUDED</strong></li>
-                  <li><span class="check-mark">✓</span> <strong>3–5 Auspicious Name Spelling Variations</strong></li>
-                  <li><span class="check-mark">✓</span> <strong>Full Vibrational Profile (Root &amp; Compound)</strong></li>
-                  <li><span class="check-mark">✓</span> Driver (D) &amp; Conductor (C) Planetary Energies</li>
-                  <li><span class="check-mark">✓</span> 9×9 Driver-Conductor Symmetric Power Matrix</li>
-                  <li><span class="check-mark">✓</span> Friendly, Best &amp; Enemy Vibrational Numbers</li>
+                  <li><span class="check-mark amber">✓</span> <strong>Sacred 1–8 Sound Table (A–Z Acoustic Frequencies)</strong></li>
+                  <li><span class="check-mark amber">✓</span> <strong>Personalized Letter-by-Letter Sound Breakdown</strong></li>
+                  <li><span class="check-mark amber">✓</span> <strong>9 Planetary Archetypes &amp; Sound Energies</strong></li>
+                  <li><span class="check-mark">✓</span> Root &amp; Compound Numerical Breakdown</li>
+                  <li><span class="check-mark">✓</span> Permanent Email Dossier &amp; Receipt</li>
                 </ul>
 
-                <button type="button" id="btnUnlockMatrixChart" class="btn-unlock-plan btn-combo-tier">
-                  <span>Unlock All-Inclusive Combo — ₹199 →</span>
+                <button type="button" id="btnUnlockPaywallChaldeanChart" class="btn-unlock-plan" style="background: linear-gradient(135deg, #D97706 0%, #B45309 100%); color: #FFFFFF; border: none;">
+                  <span>Unlock Chaldean Chart — ₹199 →</span>
                 </button>
               </div>
-
             </div>
           </section>
 
@@ -316,9 +356,55 @@
               </p>
             </div>
 
+            <!-- Natal Birth Frequency Resonance Card (Driver & Conductor Breakdown) -->
+            <div id="natalBirthVibrationsCard" class="natal-birth-resonance-card">
+              <div class="resonance-top-row">
+                <span class="resonance-badge">✦ YOUR SACRED NATAL VIBRATIONS</span>
+                <span class="resonance-dob-pill" id="natalDobDisplay">DOB: 24-08-2005</span>
+              </div>
+              <div class="resonance-pillars-grid">
+                <!-- Driver (Mulank) -->
+                <div class="resonance-pillar-box pillar-driver">
+                  <span class="pillar-label">Driver Number (Mulank · Day Number)</span>
+                  <div class="pillar-val" id="natalDriverNumber">6</div>
+                  <div class="pillar-calc" id="natalDriverCalc">Day 24 (2 + 4 = 6)</div>
+                  <div class="pillar-planet" id="natalDriverPlanet">Ruled by Venus (Shukra)</div>
+                </div>
+                <!-- Conductor (Bhagyank / Destiny) -->
+                <div class="resonance-pillar-box pillar-conductor">
+                  <span class="pillar-label">Conductor Number (Bhagyank · Total DOB)</span>
+                  <div class="pillar-val text-conductor" id="natalConductorNumber">3</div>
+                  <div class="pillar-calc" id="natalConductorCalc">24-08-2005 &rarr; 2+4+0+8+2+0+0+5 = 21 &rarr; 3</div>
+                  <div class="pillar-planet" id="natalConductorPlanet">Ruled by Jupiter (Guru)</div>
+                </div>
+              </div>
+              <div class="resonance-tuning-note">
+                ✦ The auspicious spelling variations below are specifically tuned to harmonize with your <strong>Driver <span id="noteDriverNum">6</span></strong> and <strong>Conductor <span id="noteConductorNum">3</span></strong> frequencies.
+              </div>
+            </div>
+
             <!-- Dynamic Grid of 3-5 Suggestions -->
             <div id="variantsGrid" class="variants-cards-grid">
               <!-- Dynamically populated via JS -->
+            </div>
+
+            <!-- Segment 1: Sacred Mulank Gemstone Prescriptions Showcase (Actual Products Grid) -->
+            <div id="gemstoneHarmonizerSection" class="prescribed-gemstones-showcase-section">
+              <div class="prescribed-section-header">
+                <div class="header-badge-row">
+                  <span class="shop-badge-gold" id="prescribedSectionBadge">✦ SACRED VEDIC GEMSTONE PRESCRIPTION</span>
+                  <span class="shop-badge-offer">Special Offer: Flat ₹1,499 (Original ₹2,500)</span>
+                </div>
+                <h3 class="prescribed-headline" id="prescribedSectionTitle">Vedic Gemstone Prescription for Driver 6 (Venus)</h3>
+                <p class="prescribed-subtext" id="prescribedSectionSub">
+                  Consecrated strictly for your Date of Birth. How each sacred crystal bracelet transforms your planetary vibrations, harmonizes your name frequency, and invites abundance:
+                </p>
+              </div>
+
+              <!-- Real Prescribed Products Cards Grid (Filtered Strictly to User's DOB / Driver) -->
+              <div id="gemstoneProductsGrid" class="prescribed-products-cards-grid">
+                <!-- Dynamically rendered via renderPrescribedGemstoneProducts() in app.js -->
+              </div>
             </div>
 
             <!-- Email Dispatch / Resend Card -->
@@ -340,114 +426,432 @@
                 <button type="button" id="btnSendEmailDossier" class="btn-resend-dossier">
                   <span id="btnSendEmailDossierText">Send Dossier</span>
                 </button>
+                <button type="button" id="btnPrintVariantsPDF" class="btn-secondary-pdf" title="Save or Print as PDF">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                    <path d="M6 14h12v8H6z"/>
+                  </svg>
+                  <span>Save / Print PDF</span>
+                </button>
               </div>
               <div id="resendEmailStatus" class="resend-status hidden"></div>
             </div>
           </section>
 
-          <!-- Step 4: Full Vibrational Dashboard (Included for ₹199) -->
-          <section id="resultsDashboard" class="full-dashboard-section hidden">
-            <div class="dashboard-header-bar">
-              <span class="dash-badge">COMPLETE VIBRATIONAL PROFILE</span>
-              <h3 class="dash-title">Planetary Harmony &amp; Resonance Breakdown</h3>
+          <!-- Step 3B: Unlocked 9×9 Driver & Conductor Matrix (₹199 Standalone) -->
+          <section id="dcMatrixInlineSection" class="unlocked-result-section hidden">
+            <div id="paymentSuccessNoticeDC" class="payment-success-banner">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="9 11 12 14 22 4" />
+              </svg>
+              <span id="paymentSuccessTextDC">Payment Verified (₹199 · 9×9 Driver &amp; Conductor Matrix)</span>
             </div>
 
-            <!-- Suitability Status Banner -->
-            <div id="suitabilityBanner" class="suitability-status-banner">
-              <div class="suitability-col-badge">
-                <div id="starRatingDisplay" class="star-rating">★★★★★</div>
-                <div id="tierTag" class="tier-tag">EXCELLENT</div>
+            <div class="variants-header">
+              <div class="result-badge-purple">9×9 SYMMETRIC POWER MATRIX</div>
+              <h3 class="variants-title">9×9 DRIVER &amp; CONDUCTOR COSMIC ENERGY MATRIX</h3>
+              <p class="variants-subtitle">
+                Your personalized 81-intersection symmetric Driver &amp; Conductor matrix and recommended vibrational numbers:
+              </p>
+            </div>
+
+            <!-- Natal Synergy Highlight Box -->
+            <div id="userNatalSynergyCard" class="natal-synergy-highlight-card">
+              <div class="synergy-left">
+                <span class="synergy-eyebrow">YOUR ACTIVE NATAL SYNERGY</span>
+                <h4 id="userNatalSynergyTitle" class="synergy-title">Driver 6 &amp; Conductor 3</h4>
+                <p id="userNatalSynergyCalc" class="synergy-calc-detail" style="font-size: 0.85rem; color: #E9D5FF; margin: 4px 0 6px;">24-08-2005 &rarr; 2+4+0+8+2+0+0+5 = 21 &rarr; Conductor 3 (Jupiter · Guru)</p>
+                <p id="userNatalSynergyDesc" class="synergy-desc">Optimal Chaldean Name Compound Roots for D6 &amp; C3:</p>
               </div>
-              <div class="suitability-col-info">
-                <h4 id="suitabilityHeadline" class="status-headline">Harmonic Resonance Detected</h4>
-                <p id="suitabilityReason" class="status-explanation">
-                  Your name vibrates at a harmonious frequency that supports your ruling planet.
+              <div class="synergy-right">
+                <div id="userNatalSynergyNumbers" class="synergy-numbers-pill">[3, 5]</div>
+              </div>
+            </div>
+
+            <!-- Interactive 9x9 Table -->
+            <div class="matrix-table-wrapper">
+              <p class="chart-desc">Click any D (Driver) and C (Conductor) cell intersection below to inspect harmonic compound &amp; root vibrations:</p>
+              <div class="table-responsive">
+                <table class="dc-table" id="dcMatrixTable">
+                  <thead>
+                    <tr>
+                      <th>D \ C</th>
+                      <th>C1</th><th>C2</th><th>C3</th><th>C4</th><th>C5</th><th>C6</th><th>C7</th><th>C8</th><th>C9</th>
+                    </tr>
+                  </thead>
+                  <tbody id="dcMatrixBody"></tbody>
+                </table>
+              </div>
+              <div id="matrixCellInspector" class="cell-inspector">
+                <div class="inspector-badge">Selected Synergy</div>
+                <h4 id="inspectorTitle" class="inspector-title">Driver 1 &amp; Conductor 1</h4>
+                <p id="inspectorNumbers" class="inspector-numbers">Recommended Name Numbers: <strong>[5]</strong></p>
+              </div>
+            </div>
+
+            <!-- Segment 2: 9x9 Matrix Gemstone Resonance Showcase -->
+            <div id="matrixGemstonesSection" class="prescribed-gemstones-showcase-section matrix-theme-showcase">
+              <div class="prescribed-section-header">
+                <div class="header-badge-row">
+                  <span class="shop-badge-purple" id="matrixSectionBadge">✦ 9×9 MATRIX GEMSTONE RESONANCE</span>
+                  <span class="shop-badge-offer">Vedic Consecrated: Flat ₹1,499</span>
+                </div>
+                <h3 class="prescribed-headline" id="matrixSectionTitle">Active Synergy Gemstones: Driver 6 Frequencies</h3>
+                <p class="prescribed-subtext" id="matrixSectionSub">
+                  Ground the 81-intersection cosmic matrix with authentic natural crystal bracelets tuned to your Driver line.
                 </p>
               </div>
-            </div>
 
-            <!-- 3 Pillars Grid -->
-            <div class="three-pillars-grid">
-
-              <!-- Pillar 1: Name Number -->
-              <div class="pillar-card">
-                <div class="pillar-top">
-                  <span class="pillar-label">Name Number</span>
-                </div>
-                <div class="pillar-metric">
-                  <div class="compound-tag" id="displayCompound">Compound 35</div>
-                  <div class="root-number-display" id="displayNameRoot">8</div>
-                  <div class="root-label">Root Frequency</div>
-                </div>
-                <div class="pillar-footer">
-                  <div class="letter-chips-container" id="nameLetterChips"></div>
-                </div>
-              </div>
-
-              <!-- Pillar 2: Driver Number (Day) -->
-              <div class="pillar-card">
-                <div class="pillar-top">
-                  <span class="pillar-label">Driver Number (D)</span>
-                </div>
-                <div class="pillar-metric">
-                  <div class="compound-tag" id="displayDriverTag">Day 24 (24 → 6)</div>
-                  <div class="root-number-display" id="displayDriverNum">6</div>
-                  <div class="planet-badge" id="displayDriverPlanet">Venus</div>
-                </div>
-                <div class="pillar-footer">
-                  <p class="pillar-desc" id="displayDriverDesc">Represents your core character, instincts &amp; ruling deity.</p>
-                </div>
-              </div>
-
-              <!-- Pillar 3: Conductor Number (Full DOB) -->
-              <div class="pillar-card">
-                <div class="pillar-top">
-                  <span class="pillar-label">Conductor Number (C)</span>
-                </div>
-                <div class="pillar-metric">
-                  <div class="compound-tag" id="displayConductorTag">DOB Sum 21 (21 → 3)</div>
-                  <div class="root-number-display" id="displayConductorNum">3</div>
-                  <div class="planet-badge" id="displayConductorPlanet">Jupiter</div>
-                </div>
-                <div class="pillar-footer">
-                  <p class="pillar-desc" id="displayConductorDesc">Represents your life path destiny, career &amp; karmic flow.</p>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Planetary Harmony Numbers Grid -->
-            <div class="harmony-breakdown-box">
-              <h4 class="harmony-box-title">✦ Planetary Harmony &amp; Vibrational Resonance</h4>
-              <div class="harmony-boxes-row">
-                <div class="harmony-stat-card box-friendly">
-                  <div class="stat-card-title">Friendly Numbers</div>
-                  <div class="stat-card-value" id="friendlyNumbersList">1, 2, 4, 5</div>
-                </div>
-                <div class="harmony-stat-card box-good">
-                  <div class="stat-card-title">Good / Best Numbers</div>
-                  <div class="stat-card-value" id="goodBestNumbersList">1, 5</div>
-                </div>
-                <div class="harmony-stat-card box-enemy">
-                  <div class="stat-card-title">Enemy Numbers</div>
-                  <div class="stat-card-value" id="enemyNumbersList">3, 6, 7, 8, 9</div>
-                </div>
-                <div class="harmony-stat-card box-matrix">
-                  <div class="stat-card-title">D/C Optimal Match</div>
-                  <div class="stat-card-value" id="matrixNumbersList">[1, 5]</div>
-                </div>
+              <div id="matrixProductsGrid" class="prescribed-products-cards-grid">
+                <!-- Dynamically rendered via renderPrescribedGemstoneProducts() in app.js -->
               </div>
             </div>
 
-            <!-- Button to open 9x9 Matrix & Chart -->
-            <div class="view-matrix-action-row">
-              <button type="button" id="btnOpenMatrixModalFromDash" class="btn-open-matrix-full">
-                <span>View 9×9 Driver &amp; Conductor Matrix Table →</span>
-              </button>
+            <!-- Send to Email & PDF Action Card for 9x9 Matrix -->
+            <div class="dossier-email-card modal-action-email-card" id="emailDispatchCardDCMatrix">
+              <div class="dossier-email-header">
+                <span class="mail-icon-wrap purple-mail-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C084FC" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </span>
+                <div>
+                  <h4 class="dossier-email-title">Send 9×9 Matrix Archive to Email or Download PDF</h4>
+                  <p class="dossier-email-desc">Get your personalized 9×9 Driver &amp; Conductor matrix and recommended vibrational numbers delivered to your inbox or save as PDF:</p>
+                </div>
+              </div>
+              <div class="dossier-email-form">
+                <input type="email" id="inputEmailDCMatrix" placeholder="yourname@gmail.com" class="modal-cosmic-input resend-input">
+                <button type="button" id="btnSendEmailDCMatrix" class="btn-resend-dossier btn-resend-purple">
+                  <span id="btnSendEmailDCMatrixText">Send to Email</span>
+                </button>
+                <button type="button" id="btnPrintDCMatrixPDF" class="btn-secondary-pdf" title="Save or Print as PDF">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                    <path d="M6 14h12v8H6z"/>
+                  </svg>
+                  <span>Save / Print PDF</span>
+                </button>
+              </div>
+              <div id="statusEmailDCMatrix" class="resend-status hidden"></div>
+            </div>
+          </section>
+
+          <!-- Step 3C: Unlocked Chaldean Sound Chart (₹199 Standalone) -->
+          <section id="chaldeanChartInlineSection" class="unlocked-result-section hidden">
+            <div id="paymentSuccessNoticeChaldean" class="payment-success-banner">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="9 11 12 14 22 4" />
+              </svg>
+              <span id="paymentSuccessTextChaldean">Payment Verified (₹199 · Chaldean Sacred Sound Vibration Chart)</span>
+            </div>
+
+            <div class="variants-header">
+              <div class="result-badge-amber">SACRED SOUND ARCHIVE</div>
+              <h3 class="variants-title">CHALDEAN SACRED VIBRATIONAL ALPHABET CHART (1–8)</h3>
+              <p class="variants-subtitle">
+                Ancient Babylonian sound vibration mappings. Unlike Pythagorean systems, Chaldean numbers 1 to 8 represent the pure occult cosmic frequency of each letter sound, excluding 9 (the sacred unassigned number of completion):
+              </p>
+            </div>
+
+            <!-- Chaldean 1-8 Sound Table -->
+            <div class="chaldean-alphabet-box">
+              <div class="chaldean-grid" id="chaldeanGrid">
+                <div class="num-column">
+                  <div class="col-header">1</div>
+                  <div class="col-planet">Sun (Surya)</div>
+                  <div class="col-letters">A, I, J, Q, Y</div>
+                  <div class="col-meaning">Leadership, Ambition</div>
+                  <a href="/shop/?mulank=1" target="_blank" class="col-gemstone-link">✦ Sunstone, Citrine</a>
+                </div>
+                <div class="num-column">
+                  <div class="col-header">2</div>
+                  <div class="col-planet">Moon (Chandra)</div>
+                  <div class="col-letters">B, K, R</div>
+                  <div class="col-meaning">Intuition, Harmony</div>
+                  <a href="/shop/?mulank=2" target="_blank" class="col-gemstone-link">✦ Moonstone, Aqua</a>
+                </div>
+                <div class="num-column">
+                  <div class="col-header">3</div>
+                  <div class="col-planet">Jupiter (Guru)</div>
+                  <div class="col-letters">C, G, L, S</div>
+                  <div class="col-meaning">Wisdom, Expansion</div>
+                  <a href="/shop/?mulank=3" target="_blank" class="col-gemstone-link">✦ Ametrine, Citrine</a>
+                </div>
+                <div class="num-column">
+                  <div class="col-header">4</div>
+                  <div class="col-planet">Rahu / Uranus</div>
+                  <div class="col-letters">D, M, T</div>
+                  <div class="col-meaning">Radical Shift, Intellect</div>
+                  <a href="/shop/?mulank=4" target="_blank" class="col-gemstone-link">✦ Hematite, Tiger Eye</a>
+                </div>
+                <div class="num-column">
+                  <div class="col-header">5</div>
+                  <div class="col-planet">Mercury (Budh)</div>
+                  <div class="col-letters">E, H, N, X</div>
+                  <div class="col-meaning">Commerce, Speed, Wit</div>
+                  <a href="/shop/?mulank=5" target="_blank" class="col-gemstone-link">✦ Citrine, Amethyst</a>
+                </div>
+                <div class="num-column">
+                  <div class="col-header">6</div>
+                  <div class="col-planet">Venus (Shukra)</div>
+                  <div class="col-letters">U, V, W</div>
+                  <div class="col-meaning">Magnetism, Luxury</div>
+                  <a href="/shop/?mulank=6" target="_blank" class="col-gemstone-link">✦ Rose Quartz, Moon</a>
+                </div>
+                <div class="num-column">
+                  <div class="col-header">7</div>
+                  <div class="col-planet">Ketu / Neptune</div>
+                  <div class="col-letters">O, Z</div>
+                  <div class="col-meaning">Mystic Depth, Philosophy</div>
+                  <a href="/shop/?mulank=7" target="_blank" class="col-gemstone-link">✦ Clear Quartz, Selenite</a>
+                </div>
+                <div class="num-column">
+                  <div class="col-header">8</div>
+                  <div class="col-planet">Saturn (Shani)</div>
+                  <div class="col-letters">F, P</div>
+                  <div class="col-meaning">Karmic Weight, Mastery</div>
+                  <a href="/shop/?mulank=8" target="_blank" class="col-gemstone-link">✦ Pyrite, Hematite</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Personalized Name Chaldean Sound Frequency Breakdown -->
+            <div class="chaldean-personal-breakdown-card" id="chaldeanPersonalBreakdown">
+              <h4 class="subhead-gold" id="chaldeanUserNameTitle">✦ Chaldean Sound Frequency Analysis for Your Name</h4>
+              <p class="chaldean-calc-desc">Letter-by-letter Babylonian sound vibrations and total root resonance:</p>
+              <div class="letter-breakdown-row" id="chaldeanPersonalLetterBreakdown"></div>
+              <div class="calc-summary-pills">
+                <span class="calc-pill">Compound: <strong id="chaldeanPersonalCompoundVal">-</strong></span>
+                <span class="calc-pill">Root Number: <strong id="chaldeanPersonalRootVal" class="text-gold">-</strong></span>
+                <span class="calc-pill">Name Planet: <strong id="chaldeanPersonalPlanetVal">-</strong></span>
+                <span class="calc-pill" style="border-color: rgba(56, 189, 248, 0.45);">Driver: <strong id="chaldeanBirthDriverVal" style="color: #38bdf8;">6</strong></span>
+                <span class="calc-pill" style="border-color: rgba(192, 132, 252, 0.45);">Conductor: <strong id="chaldeanBirthConductorVal" style="color: #c084fc;">3</strong></span>
+              </div>
+              <div id="chaldeanBirthDobNote" style="margin-top: 10px; font-size: 0.8rem; color: #D6CFBE; line-height: 1.4;">
+                ✦ Natal Frequencies: Day 24 &rarr; <strong>Driver 6 (Venus)</strong> &bull; DOB 24-08-2005 &rarr; 2+4+0+8+2+0+0+5 = 21 &rarr; <strong>Conductor 3 (Jupiter)</strong>
+              </div>
+            </div>
+
+            <!-- Segment 3: Chaldean Sound Frequency Gemstone Showcase -->
+            <div id="chaldeanGemstonesSection" class="prescribed-gemstones-showcase-section chaldean-theme-showcase">
+              <div class="prescribed-section-header">
+                <div class="header-badge-row">
+                  <span class="shop-badge-amber" id="chaldeanSectionBadge">✦ CHALDEAN SOUND FREQUENCY GEMSTONE RESONANCE</span>
+                  <span class="shop-badge-offer">Pran Pratishtha Energized: Flat ₹1,499</span>
+                </div>
+                <h3 class="prescribed-headline" id="chaldeanSectionTitle">Sound Resonance Gemstones for Driver 6</h3>
+                <p class="prescribed-subtext" id="chaldeanSectionSub">
+                  Harmonize your name's acoustic vibration with sacred crystal frequencies consecrated with authentic Vedic Pran Pratishtha.
+                </p>
+              </div>
+
+              <div id="chaldeanProductsGrid" class="prescribed-products-cards-grid">
+                <!-- Dynamically rendered via renderPrescribedGemstoneProducts() in app.js -->
+              </div>
+            </div>
+
+            <!-- Send to Email & PDF Action Card for Chaldean Chart -->
+            <div class="dossier-email-card modal-action-email-card" id="emailDispatchCardChaldean">
+              <div class="dossier-email-header">
+                <span class="mail-icon-wrap amber-mail-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </span>
+                <div>
+                  <h4 class="dossier-email-title">Send Chaldean Sound Chart to Email or Download PDF</h4>
+                  <p class="dossier-email-desc">Get the complete ancient 1–8 Babylonian sound vibration table and your name's planetary guide sent to your inbox or save as PDF:</p>
+                </div>
+              </div>
+              <div class="dossier-email-form">
+                <input type="email" id="inputEmailChaldean" placeholder="yourname@gmail.com" class="modal-cosmic-input resend-input">
+                <button type="button" id="btnSendEmailChaldean" class="btn-resend-dossier btn-resend-amber">
+                  <span id="btnSendEmailChaldeanText">Send to Email</span>
+                </button>
+                <button type="button" id="btnPrintChaldeanPDF" class="btn-secondary-pdf" title="Save or Print as PDF">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                    <path d="M6 14h12v8H6z"/>
+                  </svg>
+                  <span>Save / Print PDF</span>
+                </button>
+              </div>
+              <div id="statusEmailChaldean" class="resend-status hidden"></div>
             </div>
           </section>
 
         </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         3B. STANDALONE SHOWCASE: 9×9 DC POWER MATRIX (₹199)
+         =================================================================== -->
+    <section class="showcase-section dc-matrix-showcase" id="dcMatrixSection">
+      <div class="showcase-container">
+        
+        <div class="showcase-header-block">
+          <div class="showcase-eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>
+              <line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/>
+            </svg>
+            <span>STANDALONE METAPHYSICAL ARCHIVE</span>
+          </div>
+          <h2 class="showcase-title">9×9 Driver &amp; Conductor Power Matrix</h2>
+          <p class="showcase-subtitle">
+            The complete 81-intersection symmetric energy matrix that reveals optimal vibrational name numbers for every combination of Driver (Day) and Conductor (Full DOB).
+          </p>
+        </div>
+
+        <div class="showcase-layout-grid">
+          
+          <!-- Left Column: Matrix Highlights -->
+          <div class="showcase-content-left">
+            <div class="showcase-narrative">
+              <p>
+                In ancient Chaldean and Vedic numerology, your Driver (birth day) and Conductor (full birth date) create an occult resonance. The 9×9 DC Power Matrix archives all 81 energetic intersections, revealing the exact numbers that catalyze wealth, relationship harmony, and peace of mind.
+              </p>
+            </div>
+
+            <ul class="showcase-features-list">
+              <li class="showcase-feature-item">
+                <span class="showcase-feature-icon purple">✓</span>
+                <div>
+                  <strong>Complete 9×9 Driver-Conductor Grid:</strong> Access all 81 symmetric energy combinations from D1/C1 to D9/C9.
+                </div>
+              </li>
+              <li class="showcase-feature-item">
+                <span class="showcase-feature-icon purple">✓</span>
+                <div>
+                  <strong>Interactive Cell Synergy Inspector:</strong> Tap any intersection cell to inspect instant compatibility notes.
+                </div>
+              </li>
+              <li class="showcase-feature-item">
+                <span class="showcase-feature-icon purple">✓</span>
+                <div>
+                  <strong>Recommended Harmonic Name Frequencies:</strong> Discover ideal vibration numbers for each planetary pairing.
+                </div>
+              </li>
+              <li class="showcase-feature-item">
+                <span class="showcase-feature-icon purple">✓</span>
+                <div>
+                  <strong>Instant Standalone Modal Access:</strong> Explore the full interactive grid on screen with permanent reference copy.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Column: Standalone Matrix Card -->
+          <div class="showcase-card-right">
+            <div class="standalone-showcase-card dc-matrix-card-border">
+              <div class="standalone-card-tag" style="color: #C084FC;">STANDALONE ARCHIVE</div>
+              <h3 class="standalone-card-title">9×9 DC Power Matrix</h3>
+              <p class="standalone-card-desc">Interactive 81-cell symmetric Driver &amp; Conductor synergy table with live cell inspector and permanent reference copy.</p>
+
+              <div class="standalone-pricing-strip">
+                <span class="standalone-price-main" style="color: #C084FC;">₹199</span>
+                <span class="standalone-price-old">₹499</span>
+                <span class="standalone-price-discount" style="background: rgba(168, 85, 247, 0.2); color: #E9D5FF;">60% OFF</span>
+              </div>
+
+              <button type="button" class="btn-standalone-action btn-standalone-purple btnTriggerDCMatrix" id="btnSectionDCMatrix">
+                <span>Open 9×9 DC Matrix — ₹199 →</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ===================================================================
+         3C. STANDALONE SHOWCASE: CHALDEAN SOUND VIBRATION CHART (₹199)
+         =================================================================== -->
+    <section class="showcase-section chaldean-chart-showcase" id="chaldeanChartSection">
+      <div class="showcase-container">
+        
+        <div class="showcase-header-block">
+          <div class="showcase-eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 3v18M3 12h18"/>
+            </svg>
+            <span>SACRED SOUND FREQUENCY ARCHIVE</span>
+          </div>
+          <h2 class="showcase-title">Chaldean Sacred Sound Vibration Chart (1–8)</h2>
+          <p class="showcase-subtitle">
+            Ancient Babylonian vibrational mappings for the alphabet (A–Z). Unlike Pythagorean numerology, the Chaldean system maps pure sound frequencies 1 to 8, excluding sacred 9.
+          </p>
+        </div>
+
+        <div class="showcase-layout-grid">
+          
+          <!-- Left Column: Sound Chart Highlights -->
+          <div class="showcase-content-left">
+            <div class="showcase-narrative">
+              <p>
+                Originated in ancient Mesopotamia, Chaldean numerology maps acoustic sound frequencies rather than letter sequences. The number 9 is held sacred as the divine cipher of completion and is never assigned to a letter.
+              </p>
+            </div>
+
+            <ul class="showcase-features-list">
+              <li class="showcase-feature-item">
+                <span class="showcase-feature-icon amber">✓</span>
+                <div>
+                  <strong>Sacred 1–8 Alphabet Sound Table:</strong> Complete A–Z mappings to acoustic vibrational integers.
+                </div>
+              </li>
+              <li class="showcase-feature-item">
+                <span class="showcase-feature-icon amber">✓</span>
+                <div>
+                  <strong>9 Planetary Archetypes &amp; Sound Energies:</strong> Ruling celestial bodies (Sun, Moon, Jupiter, Mercury, Venus, etc.).
+                </div>
+              </li>
+              <li class="showcase-feature-item">
+                <span class="showcase-feature-icon amber">✓</span>
+                <div>
+                  <strong>Personalized Letter-by-Letter Analysis:</strong> Clear numerical sound breakdown of each character in your name.
+                </div>
+              </li>
+              <li class="showcase-feature-item">
+                <span class="showcase-feature-icon amber">✓</span>
+                <div>
+                  <strong>Root &amp; Compound Numerical Breakdown:</strong> Instant compound sum reduction to single-digit cosmic frequency.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Column: Standalone Chaldean Card -->
+          <div class="showcase-card-right">
+            <div class="standalone-showcase-card" style="border-color: rgba(245, 158, 11, 0.35);">
+              <div class="standalone-card-tag" style="color: #FBBF24;">SACRED SOUND ARCHIVE</div>
+              <h3 class="standalone-card-title">Chaldean Sound Chart</h3>
+              <p class="standalone-card-desc">Ancient sound vibration mappings from numbers 1 to 8 with personalized name vibration breakdown.</p>
+
+              <div class="standalone-pricing-strip">
+                <span class="standalone-price-main" style="color: #FBBF24;">₹199</span>
+                <span class="standalone-price-old">₹499</span>
+                <span class="standalone-price-discount" style="background: rgba(245, 158, 11, 0.2); color: #FEF3C7;">60% OFF</span>
+              </div>
+
+              <button type="button" class="btn-standalone-action btn-standalone-amber btnTriggerChaldeanChart" id="btnSectionChaldeanChart">
+                <span>Open Chaldean Chart — ₹199 →</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
@@ -711,54 +1115,7 @@
   </footer>
 
 
-  <!-- ===================================================================
-       3. 9x9 MATRIX & CHALDEAN ARCHIVE MODAL
-       =================================================================== -->
-  <div id="chartModal" class="modal-overlay hidden" role="dialog" aria-modal="true">
-    <div class="modal-backdrop" id="chartModalBackdrop"></div>
-    <div class="modal-dialog modal-lg">
-      <div class="modal-header-luxury">
-        <h3 class="modal-header-title">Chaldean Sacred Vibrational Archive</h3>
-        <button type="button" id="btnCloseChartModal" class="modal-close-icon-btn">&times;</button>
-      </div>
-      <div class="modal-body-scrollable">
-        <div class="matrix-table-wrapper">
-          <h4 class="subhead-gold">✦ 9×9 Symmetric Driver &amp; Conductor Power Matrix</h4>
-          <p class="chart-desc">Click any cell intersection to inspect optimal name vibrations:</p>
-          <div class="table-responsive">
-            <table class="dc-table" id="dcMatrixTable">
-              <thead>
-                <tr>
-                  <th>D \ C</th>
-                  <th>C1</th><th>C2</th><th>C3</th><th>C4</th><th>C5</th><th>C6</th><th>C7</th><th>C8</th><th>C9</th>
-                </tr>
-              </thead>
-              <tbody id="dcMatrixBody"></tbody>
-            </table>
-          </div>
-          <div id="matrixCellInspector" class="cell-inspector">
-            <div class="inspector-badge">Selected Synergy</div>
-            <h4 id="inspectorTitle" class="inspector-title">Driver 1 &amp; Conductor 1</h4>
-            <p id="inspectorNumbers" class="inspector-numbers">Recommended Name Numbers: <strong>[5]</strong></p>
-          </div>
-        </div>
 
-        <div class="chaldean-alphabet-box">
-          <h4 class="subhead-gold">✦ Chaldean Alphabet Vibration Table (1–8)</h4>
-          <div class="chaldean-grid" id="chaldeanGrid">
-            <div class="num-column"><div class="col-header">1</div><div class="col-letters">A, I, J, Q, Y</div></div>
-            <div class="num-column"><div class="col-header">2</div><div class="col-letters">B, K, R</div></div>
-            <div class="num-column"><div class="col-header">3</div><div class="col-letters">C, G, L, S</div></div>
-            <div class="num-column"><div class="col-header">4</div><div class="col-letters">D, M, T</div></div>
-            <div class="num-column"><div class="col-header">5</div><div class="col-letters">E, H, N, X</div></div>
-            <div class="num-column"><div class="col-header">6</div><div class="col-letters">U, V, W</div></div>
-            <div class="num-column"><div class="col-header">7</div><div class="col-letters">O, Z</div></div>
-            <div class="num-column"><div class="col-header">8</div><div class="col-letters">F, P</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
   <!-- ===================================================================
@@ -806,31 +1163,134 @@
   </div>
 
 
+
+
   <!-- ===================================================================
-       5. ZERO-DATABASE PRIVACY EMAIL WARNING MODAL
+       SACRED GEMSTONE BRACELET DIRECT RAZORPAY CHECKOUT MODAL
        =================================================================== -->
-  <div id="emailWarningModal" class="modal-overlay hidden" role="dialog" aria-modal="true">
-    <div class="modal-backdrop" id="emailWarningBackdrop"></div>
-    <div class="modal-dialog modal-sm">
+  <div id="gemstoneOrderModal" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="gemstoneModalBackdrop"></div>
+    <div class="modal-dialog modal-lg gemstone-order-dialog">
       <div class="modal-header-luxury">
-        <h3 class="modal-header-title">Zero-Database Privacy Notice</h3>
-        <button type="button" id="btnCloseEmailWarning" class="modal-close-icon-btn" aria-label="Close Notice">&times;</button>
+        <div>
+          <span class="modal-badge-gold">✦ VEDIC PRAN PRATISHTHA CONSECRATION</span>
+          <h3 class="modal-header-title">Order Sacred Power Gemstone Bracelet</h3>
+        </div>
+        <button type="button" id="btnCloseGemstoneModal" class="modal-close-icon-btn" aria-label="Close dialog">&times;</button>
       </div>
-      <div class="modal-body-scrollable">
-        <p class="warning-text">
-          Are you sure you want to proceed without an email? We operate a <strong>Zero-Database Privacy Architecture</strong> and do not store your profile on our servers. Without an email, your paid dossier cannot be recovered after this session closes.
-        </p>
-      </div>
-      <div class="warning-actions-bar">
-        <button type="button" id="btnWarningProceedWithout" class="btn-secondary-link"><span>Continue Without Email</span></button>
-        <button type="button" id="btnWarningAddEmail" class="btn-primary-gold">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          <span>Add My Email</span>
-        </button>
+
+      <div class="gemstone-order-body">
+        <!-- Selected Product Highlight Preview -->
+        <div class="selected-stone-preview-bar">
+          <div class="stone-preview-thumb-wrap">
+            <img src="/Shop/RoseQuartz.jpg" alt="Selected Gemstone Bracelet" id="gemstoneOrderPreviewImg" class="stone-preview-thumb">
+          </div>
+          <div class="stone-preview-info">
+            <h4 id="gemstoneOrderTitle" class="stone-order-title">Natural Rose Quartz Divine Love Bracelet</h4>
+            <div class="stone-order-tags">
+              <span class="tag-pill" id="gemstoneOrderMulankTag">✦ Driver 6 (Venus)</span>
+              <span class="tag-pill">✦ 100% Certified Natural Beads</span>
+              <span class="tag-pill">✦ Vedic Consecrated</span>
+            </div>
+            <div class="stone-order-pricing-row">
+              <span class="curr-order-price">₹1,499</span>
+              <span class="old-order-price">₹2,500</span>
+              <span class="offer-pill">Save 40% (₹1,001 OFF)</span>
+              <span class="free-shipping-tag">✦ Insured Express Delivery Included</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5-Point Order & Consecration Form -->
+        <form id="gemstoneOrderForm" class="gemstone-order-form">
+          <input type="hidden" id="orderProductId" value="GEM-RSQ-13">
+          <input type="hidden" id="orderProductName" value="Natural Rose Quartz Divine Love Bracelet">
+          <input type="hidden" id="orderProductMulank" value="6">
+          <input type="hidden" id="orderProductStones" value="Rose Quartz">
+
+          <div class="form-grid-2col">
+            <div class="input-field-group">
+              <label class="input-label" for="gemstoneCustomerName">
+                <span>Full Name</span>
+                <span class="label-subtext">For Consecration Sankalp</span>
+              </label>
+              <input type="text" id="gemstoneCustomerName" required placeholder="e.g. Subrata Haldar" class="modal-cosmic-input">
+            </div>
+
+            <div class="input-field-group">
+              <label class="input-label" for="gemstoneCustomerPhone">
+                <span>WhatsApp Phone</span>
+                <span class="label-subtext">For Tracking & Dispatch</span>
+              </label>
+              <input type="tel" id="gemstoneCustomerPhone" required placeholder="e.g. 9836394217" class="modal-cosmic-input">
+            </div>
+          </div>
+
+          <div class="form-grid-2col">
+            <div class="input-field-group">
+              <label class="input-label" for="gemstoneCustomerEmail">
+                <span>Email Address</span>
+                <span class="label-subtext">To Receive Proof Receipt</span>
+              </label>
+              <input type="email" id="gemstoneCustomerEmail" required placeholder="e.g. yourname@gmail.com" class="modal-cosmic-input">
+            </div>
+
+            <div class="input-field-group">
+              <label class="input-label" for="gemstoneCustomerDob">
+                <span>Date of Birth</span>
+                <span class="label-subtext">For Exact Vedic Alignment</span>
+              </label>
+              <input type="text" id="gemstoneCustomerDob" required placeholder="DD-MM-YYYY (e.g. 24-08-2005)" class="modal-cosmic-input">
+            </div>
+          </div>
+
+          <div class="input-field-group">
+            <label class="input-label" for="gemstoneShippingAddress">
+              <span>Delivery Shipping Address</span>
+              <span class="label-subtext">House/Flat No., Street, Landmark</span>
+            </label>
+            <input type="text" id="gemstoneShippingAddress" required placeholder="e.g. 12A Crystal Enclave, Near Axis Bank" class="modal-cosmic-input">
+          </div>
+
+          <div class="form-grid-3col">
+            <div class="input-field-group">
+              <label class="input-label" for="gemstoneCity"><span>City</span></label>
+              <input type="text" id="gemstoneCity" required placeholder="e.g. Kolkata" class="modal-cosmic-input">
+            </div>
+            <div class="input-field-group">
+              <label class="input-label" for="gemstoneState"><span>State</span></label>
+              <input type="text" id="gemstoneState" required placeholder="e.g. West Bengal" class="modal-cosmic-input">
+            </div>
+            <div class="input-field-group">
+              <label class="input-label" for="gemstonePincode"><span>PIN Code</span></label>
+              <input type="text" id="gemstonePincode" required placeholder="e.g. 700001" class="modal-cosmic-input">
+            </div>
+          </div>
+
+          <!-- Trust Badges Strip -->
+          <div class="order-trust-strip">
+            <div class="trust-point">✓ 100% Certified Natural Beads</div>
+            <div class="trust-point">✓ Consecrated with Vedic Pran Pratishtha</div>
+            <div class="trust-point">✓ Pan-India Insured Express Delivery</div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="modal-actions-row">
+            <button type="submit" id="btnSubmitGemstoneRazorpay" class="btn-primary-order-rzp">
+              <span>✦ Pay ₹1,499 &amp; Place Order via Razorpay</span>
+            </button>
+            <button type="button" id="btnOrderGemstoneWhatsApp" class="btn-wa-order">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.18-.543-1.897-.787-3.119-2.73-3.214-2.857-.093-.127-.768-1.022-.768-1.95 0-.928.487-1.385.661-1.574.174-.189.381-.237.508-.237.126 0 .253.003.363.008.117.006.274-.045.428.327.16.386.545 1.332.593 1.43.048.099.08.214.015.342-.064.129-.096.209-.191.319-.095.109-.2.245-.286.329-.095.094-.194.196-.083.387.111.19.493.814 1.057 1.318.727.648 1.341.85 1.531.945.191.096.302.08.414-.048.111-.127.476-.556.603-.746.127-.19.254-.159.428-.095.175.064 1.11.523 1.301.619.191.095.318.143.366.222.048.08.048.461-.096.866zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.178L2 22l4.981-1.396A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+              </svg>
+              <span>Or Order via WhatsApp (+91 98363 94217)</span>
+            </button>
+          </div>
+          <div id="gemstoneOrderError" class="resend-status hidden" style="color: #EF4444; margin-top: 10px;"></div>
+        </form>
       </div>
     </div>
   </div>
-
 
   <!-- Full Screen Payment Processing Overlay -->
   <div id="paymentLoadingScreen" class="payment-loading-overlay hidden">
@@ -860,7 +1320,7 @@
   </div>
 
   <!-- Application Logic -->
-  <script src="/static/js/app.js?v=5.3"></script>
+  <script src="/static/js/app.js?v=6.2"></script>
 </body>
 
 </html>

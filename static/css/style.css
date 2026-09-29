@@ -93,6 +93,7 @@ body.site-body {
   gap: 14px;
   text-decoration: none;
   color: inherit;
+  margin-right: 28px;
 }
 
 .brand-monogram {
@@ -1934,6 +1935,393 @@ body.site-body {
   transform: translateY(-2px);
 }
 
+/* Packages 3-Grid Layout */
+.packages-three-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px;
+}
+
+@media (max-width: 980px) {
+  .packages-three-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.btn-secondary-tier {
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--color-gold-primary);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.btn-secondary-tier:hover {
+  background: var(--color-gold-primary);
+  color: #0E0C09;
+  border-color: var(--color-gold-primary);
+  transform: translateY(-2px);
+}
+
+/* Service Quick Pills Bar in Hero */
+.service-quick-pills-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.quick-pill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(25, 21, 16, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #E6DFCE;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.quick-pill-item:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: var(--color-gold-primary);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.quick-pill-item .pill-dot {
+  color: var(--color-gold-primary);
+}
+
+/* Dual Action Row in Dashboard */
+.dual-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btn-open-chaldean-full {
+  background: linear-gradient(135deg, rgba(30, 26, 20, 0.95), rgba(45, 38, 28, 0.95)) !important;
+  border: 1px solid var(--color-gold-primary) !important;
+  color: var(--color-gold-primary) !important;
+}
+
+.btn-open-chaldean-full:hover {
+  background: var(--color-gold-primary) !important;
+  color: #0E0C09 !important;
+}
+
+/* Chaldean Modal Specifics */
+.modal-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-badge-gold {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--color-gold-primary);
+  text-transform: uppercase;
+}
+
+.chaldean-alphabet-box {
+  margin: 16px 0 24px;
+  background: rgba(18, 15, 12, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.chaldean-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .chaldean-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.num-column {
+  background: #14110D;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 8px;
+  padding: 10px 6px;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.num-column:hover {
+  border-color: var(--color-gold-primary);
+  transform: translateY(-2px);
+  background: #1B1712;
+}
+
+.col-header {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-gold-primary);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 4px;
+  margin-bottom: 6px;
+}
+
+.col-planet {
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: #D4AF37;
+  margin-bottom: 4px;
+}
+
+.col-letters {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.col-meaning {
+  font-size: 0.62rem;
+  color: #9C9486;
+  line-height: 1.25;
+}
+
+/* Chaldean Word Breakdown */
+.chaldean-calc-desc {
+  font-size: 0.82rem;
+  color: #C2BAAA;
+  margin: 4px 0 14px;
+}
+
+.letter-breakdown-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.letter-chip {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: #241E16;
+  border: 1px solid var(--color-gold-primary);
+  border-radius: 6px;
+  padding: 4px 10px;
+  min-width: 32px;
+}
+
+.chip-char {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.chip-val {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-gold-primary);
+}
+
+.chip-plus {
+  color: var(--color-gold-primary);
+  font-weight: bold;
+}
+
+.calc-summary-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.calc-pill {
+  background: #191510;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #E2DBD0;
+}
+
+/* Natal Birth Vibrations Resonance Card (Driver & Conductor Breakdown) */
+.natal-birth-resonance-card {
+  background: linear-gradient(135deg, rgba(20, 24, 38, 0.95) 0%, rgba(13, 16, 24, 0.98) 100%);
+  border: 1.5px solid var(--color-gold-primary);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+.resonance-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  padding-bottom: 12px;
+}
+
+.resonance-badge {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--color-gold-primary);
+  text-transform: uppercase;
+}
+
+.resonance-dob-pill {
+  font-size: 0.82rem;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: #FEF3C7;
+  font-weight: 600;
+}
+
+.resonance-pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 640px) {
+  .resonance-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resonance-pillar-box {
+  background: rgba(10, 12, 18, 0.8);
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.resonance-pillar-box.pillar-driver {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.resonance-pillar-box.pillar-conductor {
+  border-color: rgba(192, 132, 252, 0.45);
+}
+
+.resonance-pillar-box:hover {
+  transform: translateY(-2px);
+}
+
+.pillar-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #A39E93;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.pillar-val {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #38BDF8;
+  margin: 4px 0 6px;
+}
+
+.pillar-val.text-conductor {
+  color: #C084FC;
+}
+
+.pillar-calc {
+  font-size: 0.82rem;
+  color: #E2DBD0;
+  margin-bottom: 4px;
+  font-family: monospace;
+}
+
+.pillar-planet {
+  font-size: 0.8rem;
+  color: #D4AF37;
+  font-weight: 500;
+}
+
+.resonance-tuning-note {
+  font-size: 0.82rem;
+  color: #D6CFBE;
+  line-height: 1.5;
+  background: rgba(212, 175, 55, 0.08);
+  border-left: 3px solid var(--color-gold-primary);
+  padding: 10px 14px;
+  border-radius: 4px;
+}
+
+/* User cell highlighted in 9x9 matrix */
+.highlight-user-cell {
+  background: rgba(212, 175, 55, 0.35) !important;
+  color: #FFFFFF !important;
+  font-weight: bold !important;
+  border: 2px solid var(--color-gold-primary) !important;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+
+.selected-cell {
+  outline: 2px solid #FFFFFF !important;
+  background: rgba(212, 175, 55, 0.4) !important;
+}
+
+/* Home services section */
+.home-services-section {
+  padding: 80px 24px;
+  background: linear-gradient(180deg, #090B10 0%, #11141C 50%, #090B10 100%);
+  position: relative;
+}
+
+.home-services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-services-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.home-services-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #FFFFFF;
+  margin: 12px 0 8px;
+}
+
+.home-services-subtitle {
+  font-size: 1rem;
+  color: #A8A092;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
 
 /* --------------------------------------------------------------------------
    7. UNLOCKED VARIANTS & RESULTS DASHBOARD
@@ -2056,6 +2444,216 @@ body.site-body {
   margin-top: 24px;
 }
 
+/* ==========================================================================
+   Cross-Segment Gemstone Shop Cards (Segments 1, 2, 3)
+   ========================================================================== */
+.segment-gemstone-shop-card {
+  background: radial-gradient(circle at 10% 50%, rgba(35, 27, 18, 0.95), rgba(16, 13, 9, 0.98));
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin-top: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(212, 175, 55, 0.05);
+}
+
+.segment-gemstone-shop-card.matrix-theme-card {
+  background: radial-gradient(circle at 10% 50%, rgba(35, 18, 45, 0.95), rgba(15, 8, 22, 0.98));
+  border-color: rgba(168, 85, 247, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(168, 85, 247, 0.05);
+}
+
+.segment-gemstone-shop-card.chaldean-theme-card {
+  background: radial-gradient(circle at 10% 50%, rgba(42, 28, 12, 0.95), rgba(18, 12, 6, 0.98));
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(245, 158, 11, 0.05);
+}
+
+.shop-card-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.shop-badge-gold {
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--color-gold-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.shop-badge-purple {
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #C084FC;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.shop-badge-amber {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #FBBF24;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.shop-badge-offer {
+  font-size: 0.76rem;
+  color: #25D366;
+  font-weight: 600;
+  background: rgba(37, 211, 102, 0.1);
+  border: 1px solid rgba(37, 211, 102, 0.25);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.shop-card-content-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.shop-card-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.shop-card-title {
+  font-family: var(--font-cinzel, 'Cinzel', serif);
+  font-size: 1.12rem;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.shop-card-desc {
+  font-size: 0.84rem;
+  color: #D6CFBE;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.shop-card-stones-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.shop-card-stones-pills .stone-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--color-gold-light);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.shop-card-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.shop-card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.shop-card-price .old-price {
+  font-size: 0.85rem;
+  color: #9E9688;
+  text-decoration: line-through;
+}
+
+.shop-card-price .curr-price {
+  font-family: var(--font-cinzel, 'Cinzel', serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.btn-shop-gemstone-now {
+  background: var(--color-btn-gold-grad);
+  color: #0E0C09;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+  transition: var(--transition-smooth);
+}
+
+.btn-shop-gemstone-now:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+.btn-shop-gemstone-now.btn-shop-purple {
+  background: linear-gradient(135deg, #A855F7 0%, #7E22CE 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.35);
+}
+
+.btn-shop-gemstone-now.btn-shop-purple:hover {
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+}
+
+.btn-shop-gemstone-now.btn-shop-amber {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #0E0C09;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
+}
+
+.btn-shop-gemstone-now.btn-shop-amber:hover {
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+}
+
+.shop-perks {
+  font-size: 0.74rem;
+  color: #B5AD9E;
+}
+
+.col-gemstone-link {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.72rem;
+  color: var(--color-gold-primary);
+  text-decoration: none;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 4px;
+  padding: 3px 6px;
+  transition: var(--transition-smooth);
+}
+
+.col-gemstone-link:hover {
+  background: rgba(212, 175, 55, 0.25);
+  color: #FFFFFF;
+}
+
 .dossier-email-header {
   display: flex;
   align-items: center;
@@ -2109,6 +2707,104 @@ body.site-body {
   font-size: 0.8rem;
 }
 
+/* Showcase Gemstone Companion Cards */
+.showcase-gemstone-companion-card {
+  margin-top: 20px;
+  background: rgba(22, 17, 12, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+.showcase-gemstone-companion-card.gem-matrix-border {
+  border-color: rgba(168, 85, 247, 0.35);
+  background: rgba(20, 12, 28, 0.95);
+}
+
+.showcase-gemstone-companion-card.gem-amber-border {
+  border-color: rgba(245, 158, 11, 0.35);
+  background: rgba(26, 17, 9, 0.95);
+}
+
+.gem-comp-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-gold-primary);
+  margin-bottom: 6px;
+}
+
+.gem-comp-badge.purple {
+  color: #C084FC;
+}
+
+.gem-comp-badge.amber {
+  color: #FBBF24;
+}
+
+.showcase-gemstone-companion-card h4 {
+  font-family: var(--font-cinzel, 'Cinzel', serif);
+  font-size: 1rem;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.showcase-gemstone-companion-card p {
+  font-size: 0.78rem;
+  color: #D6CFBE;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.gem-comp-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gem-comp-price {
+  font-family: var(--font-cinzel, 'Cinzel', serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.gem-comp-price.text-purple {
+  color: #C084FC;
+}
+
+.gem-comp-price.text-amber {
+  color: #FBBF24;
+}
+
+.btn-gem-comp-action {
+  background: var(--color-btn-gold-grad);
+  color: #0E0C09;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.btn-gem-comp-action:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.btn-gem-comp-action.btn-purple {
+  background: linear-gradient(135deg, #A855F7 0%, #7E22CE 100%);
+  color: #FFFFFF;
+}
+
+.btn-gem-comp-action.btn-amber {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #0E0C09;
+}
 
 /* --------------------------------------------------------------------------
    8. FULL VIBRATIONAL DASHBOARD (3 Pillars & Harmony Breakdown)
@@ -3218,3 +3914,1121 @@ body.site-body {
     font-size: 0.7rem;
   }
 }
+
+/* ==========================================================================
+   10. THREE DISTINCT STANDALONE SHOWCASE SECTIONS (INDEX & SERVICE)
+   ========================================================================== */
+.showcase-section {
+  padding: 85px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.showcase-header-block {
+  margin-bottom: 36px;
+}
+
+.showcase-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.showcase-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.showcase-subtitle {
+  font-size: 1rem;
+  color: #A8A092;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.showcase-layout-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .showcase-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* 1. Check Your Name Showcase Atmosphere */
+.check-name-showcase {
+  background: radial-gradient(circle at 15% 40%, rgba(212, 175, 55, 0.1) 0%, transparent 60%),
+              radial-gradient(circle at 85% 60%, rgba(182, 131, 52, 0.08) 0%, transparent 55%),
+              #0B0D13;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.check-name-showcase .showcase-eyebrow {
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--color-gold-primary);
+}
+
+/* 2. 9x9 DC Matrix Showcase Atmosphere */
+.dc-matrix-showcase {
+  background: radial-gradient(ellipse at 85% 30%, rgba(99, 102, 241, 0.14) 0%, transparent 55%),
+              radial-gradient(ellipse at 15% 70%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+              #080A11;
+  border-top: 1px solid rgba(168, 85, 247, 0.25);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.dc-matrix-showcase .showcase-eyebrow {
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #C084FC;
+}
+
+.dc-matrix-card-border {
+  border-color: rgba(168, 85, 247, 0.35) !important;
+}
+
+/* 3. Chaldean Sound Chart Showcase Atmosphere */
+.chaldean-chart-showcase {
+  background: radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.12) 0%, transparent 55%),
+              radial-gradient(circle at 80% 40%, rgba(217, 119, 6, 0.1) 0%, transparent 50%),
+              #0A0B0F;
+  border-top: 1px solid rgba(245, 158, 11, 0.25);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.chaldean-chart-showcase .showcase-eyebrow {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #FBBF24;
+}
+
+/* Showcase Left Narrative Content */
+.showcase-narrative {
+  color: #D6CFBE;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.showcase-narrative p {
+  margin-bottom: 18px;
+}
+
+.showcase-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.showcase-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: #E2DBD0;
+  line-height: 1.45;
+}
+
+.showcase-feature-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--color-gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.showcase-feature-icon.purple {
+  background: rgba(168, 85, 247, 0.15);
+  color: #C084FC;
+}
+
+.showcase-feature-icon.amber {
+  background: rgba(245, 158, 11, 0.15);
+  color: #FBBF24;
+}
+
+/* Showcase Dedicated Standalone Card (Right Column) */
+.standalone-showcase-card {
+  background: linear-gradient(180deg, #161411 0%, #0F0D0A 100%);
+  border: 1.5px solid rgba(212, 175, 55, 0.35);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.standalone-showcase-card:hover {
+  border-color: var(--color-gold-primary);
+  box-shadow: 0 16px 45px rgba(212, 175, 55, 0.15);
+  transform: translateY(-4px);
+}
+
+.standalone-card-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--color-gold-primary);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.standalone-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.standalone-card-desc {
+  font-size: 0.84rem;
+  color: #A8A092;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.standalone-pricing-strip {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 20px;
+}
+
+.standalone-price-main {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-gold-primary);
+}
+
+.standalone-price-old {
+  font-size: 1.1rem;
+  color: #7A7264;
+  text-decoration: line-through;
+}
+
+.standalone-price-discount {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--color-gold-light);
+}
+
+.btn-standalone-action {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-standalone-gold {
+  background: var(--color-btn-gold-grad);
+  color: #0E0C09;
+  border: none;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+}
+
+.btn-standalone-gold:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  color: #000000;
+}
+
+.btn-standalone-purple {
+  background: linear-gradient(135deg, #7C3AED 0%, #A855F7 100%);
+  color: #FFFFFF;
+  border: none;
+  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.3);
+}
+
+.btn-standalone-purple:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+.btn-standalone-amber {
+  background: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);
+  color: #0E0C09;
+  border: none;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+}
+
+.btn-standalone-amber:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  color: #000000;
+}
+
+/* Paywall Single Centered Card for Step 2 on Service Page */
+.paywall-single-card-wrap {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.paywall-single-card {
+  background: linear-gradient(180deg, #1A1612 0%, #110E0B 100%);
+  border: 1.5px solid var(--color-gold-primary);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 16px 45px rgba(212, 175, 55, 0.2);
+  text-align: left;
+}
+
+.paywall-single-card .featured-ribbon {
+  position: static;
+  display: inline-block;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   SEGMENT PILLS & DETAILS MODAL STYLING
+   ========================================================================== */
+.quick-pill-item.active {
+  background: var(--color-btn-gold-grad) !important;
+  border-color: var(--color-gold-primary) !important;
+  color: #0E0C09 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.45) !important;
+  transform: translateY(-2px);
+}
+
+.quick-pill-item.active .pill-dot {
+  color: #0E0C09 !important;
+}
+
+.quick-pill-item.active-purple {
+  background: linear-gradient(135deg, #9333EA 0%, #7E22CE 100%) !important;
+  border-color: #C084FC !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.5) !important;
+}
+
+.quick-pill-item.active-purple .pill-dot {
+  color: #F3E8FF !important;
+}
+
+.quick-pill-item.active-amber {
+  background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
+  border-color: #FBBF24 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 18px rgba(245, 158, 11, 0.5) !important;
+}
+
+.quick-pill-item.active-amber .pill-dot {
+  color: #FEF3C7 !important;
+}
+
+/* Paywall Three Tier Grid */
+.paywall-three-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.check-mark.purple {
+  color: #C084FC !important;
+}
+
+.check-mark.amber {
+  color: #FBBF24 !important;
+}
+
+/* Modal Form Styles */
+.modal-dialog.modal-md {
+  max-width: 520px;
+  width: 92%;
+}
+
+.modal-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.modal-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.modal-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 960px) {
+  .paywall-three-tier-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .modal-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   EMAIL & PDF ACTION BARS FOR ALL SECTIONS (9x9 Matrix, Chaldean, Dashboard)
+   ========================================================================== */
+.modal-action-email-card {
+  margin-top: 24px;
+  background: rgba(18, 14, 10, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 14px;
+  padding: 20px 22px;
+}
+
+.dashboard-email-card {
+  margin-top: 24px;
+  background: linear-gradient(180deg, #181410 0%, #0F0C09 100%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 14px;
+  padding: 22px 24px;
+}
+
+.btn-secondary-pdf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(30, 26, 20, 0.95);
+  border: 1.5px solid var(--color-gold-primary);
+  color: var(--color-gold-primary);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  white-space: nowrap;
+}
+
+.btn-secondary-pdf:hover {
+  background: var(--color-gold-primary);
+  color: #0E0C09;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+}
+
+.btn-secondary-pdf svg {
+  flex-shrink: 0;
+}
+
+/* Purple Theme (9x9 DC Matrix) */
+.btn-resend-purple {
+  background: linear-gradient(135deg, #9333EA 0%, #7E22CE 100%) !important;
+  border-color: #C084FC !important;
+  color: #FFFFFF !important;
+}
+
+.btn-resend-purple:hover {
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.5) !important;
+}
+
+.purple-mail-icon {
+  background: rgba(168, 85, 247, 0.15) !important;
+  border: 1px solid rgba(168, 85, 247, 0.35) !important;
+}
+
+/* Amber Theme (Chaldean Chart) */
+.btn-resend-amber {
+  background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
+  border-color: #FBBF24 !important;
+  color: #FFFFFF !important;
+}
+
+.btn-resend-amber:hover {
+  box-shadow: 0 4px 18px rgba(245, 158, 11, 0.5) !important;
+}
+
+.amber-mail-icon {
+  background: rgba(245, 158, 11, 0.15) !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important;
+}
+
+/* ==========================================================================
+   Inline Unlocked Result Sections (No Popups)
+   ========================================================================== */
+.unlocked-result-section {
+  background: #14100C;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px;
+  padding: 32px 24px;
+  margin-top: 24px;
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.result-badge-purple {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #C084FC;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.result-badge-amber {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #FBBF24;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.natal-synergy-highlight-card {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.12), rgba(212, 175, 55, 0.08));
+  border: 1.5px solid rgba(168, 85, 247, 0.4);
+  border-radius: 12px;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.synergy-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #C084FC;
+  text-transform: uppercase;
+}
+
+.synergy-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: #F5C542;
+  margin: 4px 0 2px;
+}
+
+.synergy-desc {
+  font-size: 0.85rem;
+  color: #D6CFBE;
+  margin: 0;
+}
+
+.synergy-numbers-pill {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #34D399;
+  background: #0E0C09;
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  padding: 8px 18px;
+  border-radius: 10px;
+}
+
+.chaldean-personal-breakdown-card {
+  background: #19140F;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 24px 0;
+}
+
+/* Print Styles for Pristine PDF Output */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .top-navbar,
+  .service-hero-section,
+  .service-quick-pills-bar,
+  .service-card-container > .service-calc-card > .calc-card-header,
+  .calc-form,
+  .loading-state,
+  .paywall-selection-container,
+  .showcase-section,
+  .site-luxury-footer,
+  .footer-bottom-bar,
+  .modal-backdrop,
+  .modal-close-icon-btn,
+  .dossier-email-card,
+  .modal-action-email-card,
+  .dashboard-email-card,
+  .view-matrix-action-row,
+  .btn-secondary-pdf,
+  .btn-calculate-submit,
+  .btn-unlock-plan {
+    display: none !important;
+  }
+
+  .matrix-table-wrapper,
+  .dc-table,
+  .dc-table th,
+  .dc-table td {
+    color: #000000 !important;
+    border-color: #999 !important;
+    background: transparent !important;
+  }
+
+  .unlocked-variants-section:not(.hidden),
+  .unlocked-result-section:not(.hidden) {
+    display: block !important;
+    color: #000000 !important;
+    background: #FFFFFF !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .variant-card,
+  .natal-synergy-highlight-card,
+  .chaldean-personal-breakdown-card,
+  .num-column {
+    border: 1px solid #777 !important;
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ==========================================================================
+   SACRED PRESCRIBED GEMSTONE BRACELETS SHOWCASE (REAL PRODUCTS GRID)
+   Aesthetic: Celestial Obsidian, Golden Luminous Auras, Luxury Crystals
+   ========================================================================== */
+
+.prescribed-gemstones-showcase-section {
+  margin: 36px 0 28px;
+  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, rgba(19, 17, 14, 0.96) 65%, #0A0907 100%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 20px;
+  padding: 36px 28px;
+  box-shadow: 0 16px 48px -8px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(212, 175, 55, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.prescribed-gemstones-showcase-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #D4AF37, #F6E6C2, #D4AF37, transparent);
+}
+
+.prescribed-gemstones-showcase-section.matrix-theme-showcase {
+  background: radial-gradient(circle at 50% 0%, rgba(157, 78, 221, 0.12) 0%, rgba(19, 17, 24, 0.96) 65%, #08060B 100%);
+  border-color: rgba(192, 132, 252, 0.4);
+}
+
+.prescribed-gemstones-showcase-section.matrix-theme-showcase::before {
+  background: linear-gradient(90deg, transparent, #C084FC, #E9D5FF, #C084FC, transparent);
+}
+
+.prescribed-gemstones-showcase-section.chaldean-theme-showcase {
+  background: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.12) 0%, rgba(24, 18, 12, 0.96) 65%, #0B0905 100%);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.prescribed-gemstones-showcase-section.chaldean-theme-showcase::before {
+  background: linear-gradient(90deg, transparent, #F59E0B, #FDE68A, #F59E0B, transparent);
+}
+
+.prescribed-section-header {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto 32px;
+}
+
+.header-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.prescribed-headline {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.prescribed-subtext {
+  font-size: 0.92rem;
+  color: #D6CFBE;
+  line-height: 1.6;
+}
+
+/* Products Cards Grid */
+.prescribed-products-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 24px;
+}
+
+/* Individual Product Card */
+.prescribed-product-card {
+  background: rgba(19, 17, 14, 0.92);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.prescribed-product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.65);
+  box-shadow: 0 20px 44px -6px rgba(0, 0, 0, 0.8), 0 0 24px rgba(212, 175, 55, 0.2);
+}
+
+.prescribed-card-top-tag {
+  background: rgba(212, 175, 55, 0.14);
+  color: #F6E6C2;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prescribed-card-visual {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: #0D0B09;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.prescribed-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.prescribed-product-card:hover .prescribed-card-img {
+  transform: scale(1.05);
+}
+
+.prescribed-card-content {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.prescribed-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.prescribed-card-planet-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #D4AF37;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.prescribed-card-vibe {
+  font-size: 0.82rem;
+  color: #E6C775;
+  font-style: italic;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.22);
+}
+
+/* Life Impact Box ("How this bracelet can change your life") */
+.prescribed-life-impact-box {
+  background: rgba(10, 9, 8, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.life-impact-heading {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #F6E6C2;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.life-impact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.life-impact-item {
+  font-size: 0.82rem;
+  color: #D6CFBE;
+  line-height: 1.45;
+  position: relative;
+  padding-left: 18px;
+}
+
+.life-impact-item::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #D4AF37;
+  font-size: 0.8rem;
+}
+
+.prescribed-consecration-note {
+  font-size: 0.76rem;
+  color: #A39B8B;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Card Pricing Row */
+.prescribed-card-pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+  margin-top: auto;
+}
+
+.prescribed-curr-price {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #F6E6C2;
+}
+
+.prescribed-old-price {
+  font-size: 0.95rem;
+  color: #8C8472;
+  text-decoration: line-through;
+}
+
+.prescribed-discount-pill {
+  background: rgba(16, 185, 129, 0.16);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 9999px;
+}
+
+/* Action Buttons */
+.prescribed-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-order-stone-rzp {
+  width: 100%;
+  background: linear-gradient(135deg, #E6C775 0%, #C49733 50%, #94691B 100%);
+  color: #0F0D09;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(184, 137, 40, 0.35);
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-order-stone-rzp:hover {
+  background: linear-gradient(135deg, #F6E6C2 0%, #D4AF37 50%, #A87820 100%);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-order-stone-wa {
+  width: 100%;
+  background: rgba(37, 211, 102, 0.1);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 9px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: all 0.2s ease;
+}
+
+.btn-order-stone-wa:hover {
+  background: rgba(37, 211, 102, 0.2);
+  border-color: #25D366;
+  color: #FFFFFF;
+}
+
+.prescribed-card-trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+  font-size: 0.72rem;
+  color: #A39B8B;
+}
+
+/* Gemstone Order Modal Styling */
+.gemstone-order-dialog {
+  max-width: 680px;
+  width: 92%;
+  background: #12100D;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 24px 64px -12px rgba(0, 0, 0, 0.9), 0 0 32px rgba(212, 175, 55, 0.2);
+}
+
+.gemstone-order-body {
+  padding: 24px 28px 28px;
+}
+
+.selected-stone-preview-bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(24, 21, 17, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 22px;
+}
+
+.stone-preview-thumb-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  flex-shrink: 0;
+  background: #000;
+}
+
+.stone-preview-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stone-preview-info {
+  flex-grow: 1;
+}
+
+.stone-order-title {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.stone-order-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.stone-order-pricing-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.curr-order-price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #F6E6C2;
+}
+
+.old-order-price {
+  font-size: 0.85rem;
+  color: #8C8472;
+  text-decoration: line-through;
+}
+
+.free-shipping-tag {
+  font-size: 0.76rem;
+  color: #34D399;
+  font-weight: 600;
+}
+
+.order-trust-strip {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px dashed rgba(212, 175, 55, 0.25);
+  border-radius: 10px;
+  margin: 16px 0 20px;
+  font-size: 0.76rem;
+  color: #E6C775;
+}
+
+.btn-primary-order-rzp {
+  width: 100%;
+  background: linear-gradient(135deg, #E6C775 0%, #C49733 50%, #94691B 100%);
+  color: #0F0D09;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(184, 137, 40, 0.4);
+  transition: all 0.25s ease;
+}
+
+.btn-primary-order-rzp:hover {
+  background: linear-gradient(135deg, #F6E6C2 0%, #D4AF37 50%, #A87820 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 26px rgba(212, 175, 55, 0.55);
+}
+
+.btn-wa-order {
+  width: 100%;
+  background: rgba(37, 211, 102, 0.12);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-wa-order:hover {
+  background: rgba(37, 211, 102, 0.22);
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .prescribed-gemstones-showcase-section {
+    padding: 24px 16px;
+  }
+  .prescribed-products-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .selected-stone-preview-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+

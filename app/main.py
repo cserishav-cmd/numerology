@@ -38,6 +38,12 @@ STATIC_DIR.mkdir(parents=True, exist_ok=True)
 
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
+# Mount Shop Directory
+SHOP_DIR = Path(__file__).resolve().parent.parent / "Shop"
+if SHOP_DIR.exists():
+    app.mount("/Shop", StaticFiles(directory=SHOP_DIR, html=True), name="Shop")
+    app.mount("/shop", StaticFiles(directory=SHOP_DIR, html=True), name="shop")
+
 @app.get("/")
 async def serve_index():
     index_file = STATIC_DIR / "index.html"

@@ -56,20 +56,40 @@ class Settings:
     RAZORPAY_KEY_SECRET: str = get_env_val("RAZORPAY_KEY_SECRET")
 
     # Dynamic Package Pricing (INR and Paise, configured via .env)
-    HARMONIZATION_PRICE_INR: int = int(get_env_val("HARMONIZATION_PRICE_INR", default="99"))
-    HARMONIZATION_PRICE_PAISE: int = int(
+    # Tier 1: Check Your Name (Full Master Package)
+    CHECK_NAME_PRICE_INR: int = int(get_env_val("CHECK_NAME_PRICE_INR", "HARMONIZATION_PRICE_INR", default="1499"))
+    CHECK_NAME_PRICE_PAISE: int = int(
         get_env_val(
+            "CHECK_NAME_PRICE_PAISE",
             "HARMONIZATION_PRICE_PAISE",
-            default=str(int(get_env_val("HARMONIZATION_PRICE_INR", default="99")) * 100)
+            default=str(int(get_env_val("CHECK_NAME_PRICE_INR", "HARMONIZATION_PRICE_INR", default="1499")) * 100)
         )
     )
-    MATRIX_CHART_PRICE_INR: int = int(get_env_val("MATRIX_CHART_PRICE_INR", default="199"))
-    MATRIX_CHART_PRICE_PAISE: int = int(
+
+    # Tier 2: 9x9 Driver-Conductor Matrix Table
+    DC_MATRIX_PRICE_INR: int = int(get_env_val("DC_MATRIX_PRICE_INR", default="199"))
+    DC_MATRIX_PRICE_PAISE: int = int(
         get_env_val(
-            "MATRIX_CHART_PRICE_PAISE",
-            default=str(int(get_env_val("MATRIX_CHART_PRICE_INR", default="199")) * 100)
+            "DC_MATRIX_PRICE_PAISE",
+            default=str(int(get_env_val("DC_MATRIX_PRICE_INR", default="199")) * 100)
         )
     )
+
+    # Tier 3: Chaldean Alphabet Chart & Vibration Archive
+    CHALDEAN_CHART_PRICE_INR: int = int(get_env_val("CHALDEAN_CHART_PRICE_INR", default="199"))
+    CHALDEAN_CHART_PRICE_PAISE: int = int(
+        get_env_val(
+            "CHALDEAN_CHART_PRICE_PAISE",
+            default=str(int(get_env_val("CHALDEAN_CHART_PRICE_INR", default="199")) * 100)
+        )
+    )
+
+    # Backward compatibility aliases
+    HARMONIZATION_PRICE_INR: int = CHECK_NAME_PRICE_INR
+    HARMONIZATION_PRICE_PAISE: int = CHECK_NAME_PRICE_PAISE
+    MATRIX_CHART_PRICE_INR: int = DC_MATRIX_PRICE_INR
+    MATRIX_CHART_PRICE_PAISE: int = DC_MATRIX_PRICE_PAISE
+
 
     # SMTP Configuration (Change anytime in .env on VPS; supports aliases like 'samtp pass' or 'mail from')
     SMTP_HOST: str = get_env_val("SMTP_HOST", default="smtp.gmail.com")
